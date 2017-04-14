@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>trolled lol</title>
+
+</head>
+
+<body style="background-color: black">
+
+<script>
+      //button script
+      function move() {
+            document.getElementById("button").style.left = Math.floor(Math.random() * window.innerWidth - 140) + "px";
+            document.getElementById("button").style.top = Math.floor(Math.random() * window.innerHeight - 70) + "px";
+      }
+
+      //picture script
+      var rotations = 0
+	function rotateimages(){
+            if(rotations < 3){
+                  var currentPicUL = document.getElementById("upperLeftImg").src;
+                  if (currentPicUL.search("red.png") > -1){
+                        document.getElementById("upperLeftImg").src = "../images/blue.png";
+                        document.getElementById("upperRightImg").src = "../images/yellow.png";
+                        document.getElementById("lowerRightImg").src = "../images/gray.png";
+                        document.getElementById("lowerLeftImg").src = "../images/red.png";
+                  }
+                  else if (currentPicUL.search("blue.png") > -1){
+                        document.getElementById("upperLeftImg").src = "../images/yellow.png";
+                        document.getElementById("upperRightImg").src = "../images/gray.png";
+                        document.getElementById("lowerRightImg").src = "../images/red.png";
+                        document.getElementById("lowerLeftImg").src = "../images/blue.png";
+                  }
+                  else if (currentPicUL.search("yellow.png") > -1){
+                        document.getElementById("upperLeftImg").src = "../images/gray.png";
+                        document.getElementById("upperRightImg").src = "../images/red.png";
+                        document.getElementById("lowerRightImg").src = "../images/blue.png";
+                        document.getElementById("lowerLeftImg").src = "../images/yellow.png";
+                  }
+                  else if (currentPicUL.search("gray.png") > -1){
+                        document.getElementById("upperLeftImg").src = "../images/red.png";
+                        document.getElementById("upperRightImg").src = "../images/blue.png";
+                        document.getElementById("lowerRightImg").src = "../images/yellow.png";
+                        document.getElementById("lowerLeftImg").src = "../images/gray.png";
+                  }
+                  rotations++;
+            }
+            else{
+                  document.getElementById("upperLeftImg").src = "../images/black.png";
+                  document.getElementById("upperRightImg").src = "../images/black.png";
+                  document.getElementById("lowerRightImg").src = "../images/black.png";
+                  document.getElementById("lowerLeftImg").src = "../images/black.png";
+            }
+	}
+</script>
+
+<center>
+<table style="text-align: center">
+      <tr>
+            <td><img id="upperLeftImg" src="../images/red.png" onclick="rotateimages();"></td>
+            <td><img id="upperRightImg" src="../images/blue.png" onclick="rotateimages();"></td>
+      </tr>
+      <tr>
+            <td><img id="lowerLeftImg" src="../images/gray.png" onclick="rotateimages();"></td>
+            <td><img id="lowerRightImg" src="../images/yellow.png" onclick="rotateimages();"></td>
+      </tr>
+</table>
+</center>
+
+<button id="button" style="width: 140px; height: 70px; position: absolute; top: 100px; left: 100px; background-color: white; border-color: black;" onmouseover="move();">Click Me!</button>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+  <title>
+    json project
+  </title>
+<head>
+  <p>JSON Project</p>
+</head>
+<body>
+  <input type="radio" onclick="doit();">
+</body>
+<script>
+clickObj=[{"on":"yay",
+           "off":"toobad"}];
+var i = true;
+function doit(){
+  if(i){
+    alert(clickObj[0].on);
+    i=false;
+  } else {
+  alert (clickObj[0].off);
+  i= true;
+    }
+  }
+</script>

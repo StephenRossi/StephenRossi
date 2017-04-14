@@ -1,0 +1,3 @@
+If using a seperate CSS tab, connect to html with
+
+<link type="text/css" rel="stylesheet" href="stylesheet.css"/>

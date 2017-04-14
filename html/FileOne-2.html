@@ -1,0 +1,144 @@
+<<html>
+	<title> Login to Cracking the Code</title>
+
+
+		<style>
+			.cell {
+				color: gold;
+				background-color: navy;
+				border: solid black;
+				padding: 25px;
+				height: 160px;
+				width: 230px;
+				}
+				
+			table {
+				margin-top: 22px;
+				border: 4px solid grey;
+				padding: 14p;
+				}
+				body {
+					background-color: silver;
+					}
+						.alert {
+							padding: 20px;
+							background-color: green;
+							color: white;
+							margin-top: 20px;
+							}
+
+						.closebtn {
+						margin-left: 15px;
+						color: white;
+						font-weight: bold;
+						float: right;
+						font-size: 22px;
+						line-height: 20px;
+						cursor: pointer;
+						transition: 0.3s;
+						}
+						.closebtn:hover {
+    					color: black;
+		</style>
+<body> 
+	<center>
+		<div class="alert">
+			<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+				<strong>Please type your first and last name into the input boxs provided.</strong> </center>
+		</div>
+<center><strong>
+	<iframe src="http://free.timeanddate.com/clock/i5dn5u7a/n5156/szw210/szh210/hoc000/hbw2/hfceee/cf100/hncccc/hcw2/fdi76/mqc000/mql10/mqw4/mqd98/mhc000/mhl10/mhw4/mhd98/mmc000/mml10/mmw1/mmd98" frameborder="0" width="210" height="210">
+	</iframe></center></strong>
+			<center> <table>
+				<tr>
+					<td id="cell1" class="cell"> 
+						<script>
+							function log0(){
+								var sym0 = document.getElementById("sym0")
+								var txtName2 = document.getElementById("txtName2");
+								var txtName = document.getElementById("txtName");
+								var txtOutput = document.getElementById("txtOutput");
+								var sym = sym0.value;
+								var name1 = txtName.value;
+								var name2 = txtName2.value;
+						  			txtOutput.value = "Hi there, " + sym + name1 + sym + name2 + sym + "!"
+							 	}
+							function log1(){
+								var sym1 = document.getElementById("sym1")
+								var txtName2 = document.getElementById("txtName2");
+								var txtName = document.getElementById("txtName");
+								var txtOutput = document.getElementById("txtOutput");
+								var sym = sym1.value;
+								var name1 = txtName.value;
+								var name2 = txtName2.value;
+						  			txtOutput.value = "Hi there, " + sym + name1 + sym + name2 + sym + "!"		
+							  	}  	
+					  	  	function log2(){
+								var sym2 = document.getElementById("sym2")
+								var txtName2 = document.getElementById("txtName2");
+								var txtName = document.getElementById("txtName");
+								var txtOutput = document.getElementById("txtOutput");
+								var sym = sym2.value;
+								var name1 = txtName.value;
+								var name2 = txtName2.value;
+						  			txtOutput.value = "Hi there, " + sym + name1 + sym + name2 + sym + "!"		
+							  	}   	
+							function log3(){
+								var sym3 = document.getElementById("sym3")
+								var txtName2 = document.getElementById("txtName2");
+								var txtName = document.getElementById("txtName");
+								var txtOutput = document.getElementById("txtOutput");
+								var sym = sym3.value;
+								var name1 = txtName.value;
+								var name2 = txtName2.value;
+							  		txtOutput.value = "Hi there, " + sym + name1 + sym + name2 + sym + "!"		
+							  	}  	
+							function log4(){
+								var sym4 = document.getElementById("sym4")
+								var txtName2 = document.getElementById("txtName2");
+								var txtName = document.getElementById("txtName");
+								var txtOutput = document.getElementById("txtOutput");
+								var sym = sym4.value;
+								var name1 = txtName.value;
+								var name2 = txtName2.value;
+						  			txtOutput.value = "Welcome " + sym + name1 + sym + name2 + sym + "!"		
+							  	} 
+				 		</script>
+<body>
+	<form action="action_page.php">
+		<b> First name:<br>
+			<input type="text" id = "txtName">
+				<br>
+					Last name: </b><br>
+			<input type="text" id = "txtName2">	
+				<br><br>  
+			<input type = "text" id = "txtOutput" />
+	</form>
+</body>
+			</td>
+				<td id="cell2" class="cell">
+<body>
+	<p>Click symbol assigned to your domain to submit and complete login.<p>
+		<form action="action_page.php">
+		 	<input type = "button" id = "sym0"
+		    	value = "@"
+		    	onclick = "log0()"/>
+		    <input type = "button" id = "sym1"
+		    	value = "&"
+		    	onclick = "log1()"/>
+		    <input type = "button" id = "sym2"
+		    	value = "~"
+		    	onclick = "log2()"/>
+			<input type = "button" id = "sym3"
+		    	value = "#"
+		    	onclick = "log3()"/>
+		    <input type = "button" id = "sym4"
+		    	value = "*"
+		    	onclick = "log4()"/>
+		</form>
+</body>
+				</td>
+			</tr>
+		</table> </center>
+	</body>
+</html>

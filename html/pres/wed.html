@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title> Snowmen</title>
+    	<link rel="icon" href="http://clipartix.com/wp-content/uploads/2016/04/Hearts-heart-clipart.png">
+    	<link href="https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps|Courgette|Niconne|Permanent+Marker" rel="stylesheet">
+	</head>
+<style type="text/css">
+	body {
+		margin: 0px;
+		padding: 0px;
+	}
+	#yesOrNo {
+		width: 140px;
+  		height: 30px;
+		margin-top: 40px;
+		border-radius: 8px;
+		background-color: #a0a0a0;
+		padding: 15px;
+		opacity: .85;
+	}
+	.buttonO {
+ 		margin: 10px;
+ 		margin-top: 0px;
+ 		background-color: #95979b;
+ 		border-radius: 10px;
+		-moz-box-shadow: 0px 10px 14px -7px #4a4a4a;
+		-webkit-box-shadow: 0px 10px 14px -7px #4a4a4a;
+		box-shadow: 0px 10px 14px -7px #4a4a4a;
+		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e8e8e8), color-stop(1, #bfbfbf));
+		background:-moz-linear-gradient(top, #e8e8e8 5%, #bfbfbf 100%);
+		background:-webkit-linear-gradient(top, #e8e8e8 5%, #bfbfbf 100%);
+		background:-o-linear-gradient(top, #e8e8e8 5%, #bfbfbf 100%);
+		background:-ms-linear-gradient(top, #e8e8e8 5%, #bfbfbf 100%);
+		background:linear-gradient(to bottom, #e8e8e8 5%, #bfbfbf 100%);
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e8e8e8', endColorstr='#bfbfbf',GradientType=0);
+		background-color:#e8e8e8;
+		-moz-border-radius:4px;
+		-webkit-border-radius:4px;
+		border-radius:4px;
+		border:1px solid #cccccc;
+		display:inline-block;
+		cursor:pointer;
+		color:#696969;
+		font-family:Arial;
+		font-size:13px;
+		font-weight:bold;
+		padding:6px 12px;
+		text-decoration:none;
+		text-shadow:0px 1px 0px #d9d9d9;
+	}
+	.buttonO:hover {
+		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bfbfbf), color-stop(1, #e8e8e8));
+		background:-moz-linear-gradient(top, #bfbfbf 5%, #e8e8e8 100%);
+		background:-webkit-linear-gradient(top, #bfbfbf 5%, #e8e8e8 100%);
+		background:-o-linear-gradient(top, #bfbfbf 5%, #e8e8e8 100%);
+		background:-ms-linear-gradient(top, #bfbfbf 5%, #e8e8e8 100%);
+		background:linear-gradient(to bottom, #bfbfbf 5%, #e8e8e8 100%);
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bfbfbf', endColorstr='#e8e8e8',GradientType=0);
+		background-color:#bfbfbf;
+	}
+	.buttonO:active {
+		position:relative;
+		top:1px;
+}
+	#butThree {
+		display: none;
+	}	
+	.header {
+		width: 95%;
+		border: 1px solid #455e26;
+		border-bottom-right-radius: 20px;
+		border-bottom-left-radius: 20px;
+		height: 80px;
+		font-family:'Permanent Marker', cursive;
+		background-color: #6a913b;
+		opacity: 0.8;
+		box-shadow: 4px black;
+		display: none;
+		font-size: 60px;
+	}
+	.header p {
+		margin-top: -10px;
+		text-decoration: underline;
+		color: #2e3f1a;
+	}
+	.footer {
+		width: 95%;
+		border: 1px solid #455e26;
+		border-top-right-radius: 20px;
+		border-top-left-radius: 20px;
+		height: 80px;
+		font-family:'Permanent Marker', cursive;
+		background-color: #6a913b;
+		opacity: 0.8;
+		box-shadow: 4px black;
+		display: none;
+		font-size: 60px;
+	}
+	.footer p {
+		margin-top: -10px;
+		text-decoration: underline;
+		color: #2e3f1a;
+	}
+	.middle {
+		width: 95%;
+		border: 1px solid #455e26;
+		border-radius: 20px;
+		height: 80px;
+		font-family:'Permanent Marker', cursive;
+		background-color: #6a913b;
+		opacity: 0.8;
+		box-shadow: 4px black;
+		display: none;
+		font-size: 60px;
+	}
+	.middle p {
+		margin-top: -10px;
+		text-decoration: underline;
+		color: #2e3f1a;
+	}
+	.Pics {
+		height: 360px;
+		width: 520px;
+		margin: 30px;
+	}
+	.radBut {
+		height: 20px;
+		width: 20px;
+		color: #6c913f;
+		top: 320px;
+		position: absolute;
+	}
+	.radButT {
+		height: 20px;
+		width: 20px;
+		color: #6c913f;
+		top: 740px;
+		position: absolute;
+	}
+	.radButH {
+		height: 20px;
+		width: 20px;
+		color: #6c913f;
+		top: 1155px;
+		position: absolute;
+	}
+	.radButB {
+		height: 20px;
+		width: 20px;
+		color: #6c913f;
+		top: 1500px;
+		position: absolute;
+	}
+
+	.radButQ {
+		height: 20px;
+		width: 20px;
+		color: #6c913f;
+		position: absolute;
+	}
+	#divTwo {
+		display: none;
+		padding: 20px;
+
+	}
+    /*.box{
+    	height: 360px;
+    	width: 540px;
+        display: none;
+        margin-top: 20px;
+        border: 1px solid #000;
+        background: url("sceneback.png");
+    }
+    .counC{ background: url("sceneback.png"); 
+    }
+    .hutW{ background: url("sceneback.png"); 
+    }
+    .capC{ background: url("scenebackC.png"); 
+    }	*/ 
+
+    canvas, img {
+    	display:block; margin:0em auto; border:1px solid black; 
+ 	}
+    canvas { 
+    	background-color: white;
+    	display: none; 
+    	margin-bottom: : 5px;
+    	position: static;
+    	margin-top: 20px;
+    }
+    .noShow {
+    	display: none;
+    }
+    #divThree {
+    	display: none;
+    }
+    #divThr {
+    	display: none;
+    }
+    #divFour { 
+    	display: none;
+    }
+    #midT {
+    	width: 95%;
+		border: 1px solid #455e26;
+		border-radius: 20px;
+		height: 80px;
+		font-family:'Permanent Marker', cursive;
+		background-color: #6a913b;
+		opacity: 0.8;
+		box-shadow: 4px black;
+		display: none;
+		font-size: 60px;
+    }
+    #midF {
+    	width: 95%;
+		border: 1px solid #455e26;
+		border-radius: 20px;
+		height: 80px;
+		font-family:'Permanent Marker', cursive;
+		background-color: #6a913b;
+		opacity: 0.8;
+		box-shadow: 4px black;
+		display: none;
+		font-size: 60px;
+    }
+    #imgPart {
+    	position: absolute;
+    	margin-left: 30%;
+    	margin-top: 20px;
+    }
+    #imgNine {
+    	position: absolute;
+    	margin-left: 64.8%;
+    	margin-top: 326px;
+    }
+    #imgTen {
+    	position: absolute;
+    	margin-left: 60%;
+    	margin-top: 326px;
+    }
+    #imgEleven {
+    	position: absolute;
+    	margin-left: 46%;
+    	margin-top: 300px;
+    }
+    #imgTwelve {
+    	position: absolute;
+    	margin-left: 37%;
+    	margin-top: 326px;
+    }
+    #imgThirteen {
+    	position: absolute;
+    	margin-left: 31%;
+    	margin-top: 326px;
+    }
+    #imgUs {
+    	position: absolute;
+    	margin-left: 48.5%;
+    	margin-top: 310px;
+    }
+
+</style>
+	<body id="body" style="background: url('first.jpg'); background-repeat:no-repeat; background-size:cover;">
+			<div id="delMe">
+				<p id="topText" style="font-family: 'Niconne', cursive; font-size: 100px; margin-left:25%; margin-top: 50px; color: #001a44">Do You Want to Build</p>  
+				<p id="botText" style="font-family: 'Niconne', cursive; font-size: 100px; margin-left: 50%; margin-top: -80px;color: #001a44"> a Snowman? </p> 
+			</div>
+		<center id="center">			
+			<div id="yesOrNo">
+				<button class="buttonO" id="butOne" onclick="yesOne()"> Yes </button>
+				<button class="buttonO" id="butTwo" onclick="noOne()"> No </button>
+				<button class="buttonO" id="butThree" onclick="change()">YAYAYAYAY</button>
+			</div>
+		</center>
+		<center>
+			<div id="header" class="header">
+				<p> Scenery: </p>
+			</div>
+			<div id="divTwo">
+				<table>
+					<tr>
+						<td>
+							<input class="radBut" style="left:6%;" type="radio" name="scene" onclick="drawClub()" value="countC">
+								<img class="Pics" src="countryclub.jpg"/>
+							</input>
+						</td>
+						<td>
+							<input class="radBut" style="left:49%;"  type="radio" name="scene" onclick="drawHut()" value="woodH"> 
+								<img class="Pics" src="woodhut.jpg"/>
+							</input>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input class="radButT" style="left:6%;" type="radio" name="scene" onclick="drawAisle()" value="asileS">
+								<img class="Pics" src="stonewalk.jpg"/>
+							</input>
+						</td>
+						<td>
+							<input class="radButT" style="left:49%;"  type="radio" name="scene" onclick="drawStone()" value="stoneW"> 
+								<img class="Pics" src="stonewall.jpg"/>
+							</input>
+						</td>
+					</tr>					
+					<tr>
+						<td>
+							<input class="radButH" style="left:6%;" type="radio" name="scene" onclick="drawBeach()" value="beachC">
+								<img class="Pics" src="capebeach.jpg"/>
+							</input>
+						</td>
+						<td>
+							<input class="radButH" style="left:49%;"  type="radio" name="scene" onclick="drawCape()" value="capeC"> 
+								<img class="Pics" src="capecod.jpg"/>
+							</input>
+						</td>
+					</tr>						
+				</table>
+			</div>
+				<img class="noShow" id="imgOne" src="scenebackCC.png"/>
+				<img class="noShow" id="imgTwo" src="scenebackW.png"/>
+				<img class="noShow" id="imgThree" src="scenebackM.png"/>
+				<img class="noShow" id="imgFour" src="scenebackM.png"/>
+				<img class="noShow" id="imgSeven" src="scenebackB.png"/>
+				<img class="noShow" id="imgEight" src="scenebackC.png"/>
+
+			<div id="midO" class="middle">
+				<p> People: </p> <div style="font-family: Impact; font-size: 18px;""> ~Censored~ </div>
+			</div>
+				<div id="divThree">
+					<table>
+						<tr>
+							<td>
+								<input class="radButB" style="left:27%; margin-top: 270px" type="checkbox" name="People" onclick="drawTwo()" value="twoP">
+									<img class="Pics" src="peopletwo.png"/>
+								</input>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input class="radButB" style="left:27%; margin-top: 670px"  type="checkbox" name="People" onclick="drawSome()" value="someP"> 
+									<img class="Pics" src="tenpeople.jpg"/>
+								</input>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input class="radButB" style="left:27%; margin-top: 1110px"  type="checkbox" name="People" onclick="drawLot()" value="alotP"> 
+									<img class="Pics" src="hundredpeople.jpg"/>
+								</input>
+							</td>
+						</tr>
+					</table>
+				</div>
+			
+
+			<div id="midTh" class="middle">
+				<p> Other: </p>
+			</div>
+				<div id="divThr">
+					<table>
+						<tr>
+							<td>
+								<input class="radButQ" style="left:27%; margin-top: 200px" type="checkbox" name="Othr" onclick="drawCake()" value="cake">
+									<img class="Pics" src="bigcake.jpg"/>
+								</input>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input class="radButQ" style="left:27%; margin-top: 200px"  type="checkbox" name="Othr" onclick="drawFood()" value="food"> 
+									<img class="Pics" src="buffet.jpg"/>
+								</input>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input class="radButQ" style="left:27%; margin-top: 200px"  type="checkbox" name="Othr" onclick="drawParty()" value="party"> 
+									<img class="Pics" src="weddingparty.jpg"/>
+								</input>
+							</td>
+						</tr>
+					</table>
+				</div>
+			
+
+			<div id="midT" class="middle">
+				<p> Needed: </p>
+			</div>
+			<div id="divFour">
+				<table>
+					<tr>
+						<td>
+							<input style="left:27%; margin-top: 200px; height: 20px; width: 20px; color: #6c913f; position: absolute;"  type="radio" name="NeedUs" onclick="needUs()" value="needUs"> 
+								<img class="Pics" src="greykiss.jpg"/>
+							</input>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="midF" class="middle">
+				<p> Outcome: </p>
+			</div>
+		</center>
+				<img class="noShow" id="imgPart" style="width: 540px; border-width: 0px;" src="partyTime.png"/>
+				<img class="noShow" id="imgNine" style="height: 55px; border-width: 0px;" src="food.png"/>
+				<img class="noShow" id="imgTen"  style="height: 55px; border-width: 0px;" src="wedCake.png"/>
+				<img class="noShow" id="imgEleven" style="height: 85px; border-width: 0px;" src="peopTwo.png"/>
+				<img class="noShow" id="imgTwelve" style="height: 55px; border-width: 0px;" src="some.png"/>
+				<img class="noShow" id="imgThirteen" style="height: 55px; border-width: 0px;" src="some.png"/>
+				<img class="noShow" id="imgUs" style="height: 25px; border-width: 0px;" src="abs31.jpg"/>
+    	<center> 
+    			<canvas id="myCanvas" width="540px" height="360px"> </canvas>
+    		<div id="foot" class="footer">
+	 			<p style="margin-left: 200px"> Continue.. <button class="buttonO" style="margin-left: 180px" onclick="jumpPage()">~Censored~</button></p>
+			</div>
+		</center>
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>		
+	<script type="text/javascript">
+	
+		function yesOne() {
+			document.body.style.backgroundImage = "url('weddingtwo.jpg')";
+    	
+    		var str = document.getElementById("topText").innerHTML;
+    		var res = str.replace("Do You Want to Build", "I knew you did! Now lets");
+    		document.getElementById("topText").innerHTML = res;
+
+    		var str = document.getElementById("botText").innerHTML;
+    		var res = str.replace(" a Snowman? ", "get to planning!");
+    		document.getElementById("botText").innerHTML = res;
+
+    	//	var str = document.getElementById("butOne").innerHTML;
+    	//	var res = str.replace("Yes", "Okei");
+    	//	document.getElementById("butOne").innerHTML = res;
+
+    		var str = document.getElementById("topText").innerHTML;
+    		var res = str.replace("Shut up! Yes you do!", "I knew you did! Now lets");
+    		document.getElementById("topText").innerHTML = res;
+
+    		var str = document.getElementById("botText").innerHTML;
+    		var res = str.replace("Go click yes!", "get to planning!");
+    		document.getElementById("botText").innerHTML = res;
+
+    	//	var str = document.getElementById("butTwo").innerHTML;
+    	//	var res = str.replace(" No ", "Dokie!");
+    	//	document.getElementById("butTwo").innerHTML = res;
+
+    		document.getElementById("yesOrNo").style.width = "180px";
+
+    		document.getElementById("butOne").style.display = "none";
+    		document.getElementById("butTwo").style.display = "none";
+    		document.getElementById("butThree").style.display = "inline-block";
+
+    		//	function addElement(parentId, elementTag, elementId, html) {
+    // Adds an element to the document
+   			//		var p = document.getElementById(yesOrNo);
+    		//		var newElement = document.createElement(button);
+    		//		newElement.setAttribute('id', butTwo);
+    		//		newElement.innerHTML = html;
+    		//		p.appendChild(newElement);
+			
+   	};
+			
+
+		function noOne() {
+    		document.body.style.backgroundImage = "url('sadface.jpg')";
+
+    		var str = document.getElementById("topText").innerHTML;
+    		var res = str.replace("Do You Want to Build", "Shut up! Yes you do!");
+    		document.getElementById("topText").innerHTML = res;
+
+    		var str = document.getElementById("botText").innerHTML;
+    		var res = str.replace(" a Snowman? ", "Go click yes!");
+    		document.getElementById("botText").innerHTML = res;
+
+    		document.getElementById("butTwo").style.display = "none";
+
+    		var str = document.getElementById("topText").innerHTML;
+    		var res = str.replace("I knew you did! Now lets", "Shut up! Yes you do!");
+    		document.getElementById("topText").innerHTML = res;
+
+    		var str = document.getElementById("botText").innerHTML;
+    		var res = str.replace("get to planning!", "Go click yes!");
+    		document.getElementById("botText").innerHTML = res;
+
+    		var str = document.getElementById("butOne").innerHTML;
+    		var res = str.replace("Yes", "Fiiine... Yes");
+    		document.getElementById("butOne").innerHTML = res;
+	};
+
+		function change() {
+			document.getElementById("body").style.background.repeat = "inherited";
+			document.getElementById("body").style.background.size = "auto";
+			document.body.style.backgroundImage = "url('blurrytree.jpg')";		
+			
+			var parent = document.getElementById("delMe");
+			var child = document.getElementById("topText");
+			parent.removeChild(child);
+
+			var parent = document.getElementById("delMe");
+			var child = document.getElementById("botText");
+			parent.removeChild(child);
+
+			var parent = document.getElementById("center");
+			var child = document.getElementById("yesOrNo");
+			parent.removeChild(child);
+
+			document.getElementById("header").style.display = "inline-block";
+			document.getElementById("foot").style.display = "inline-block";
+			document.getElementById("divTwo").style.display = "inline-block";
+			document.getElementById("divThree").style.display = "inline-block";
+			document.getElementById("divThr").style.display = "inline-block";
+			document.getElementById("divFour").style.display = "inline-block";
+			document.getElementById("midO").style.display = "inline-block";
+			document.getElementById("midT").style.display = "inline-block";
+			document.getElementById("midTh").style.display = "inline-block";
+			document.getElementById("midF").style.display = "inline-block";
+			document.getElementById("myCanvas").style.display = "inline-block";	
+
+		//	document.getElementById("sceneD").style.display = "inline-block";
+
+	}
+		function drawClub() {
+			var context= document.getElementById("myCanvas");
+			var ctx= context.getContext("2d");
+			ctx.fillStyle = "white";
+			ctx.fillRect(0,0,540,360);
+
+			var img=document.getElementById("imgOne");
+    		ctx.drawImage(img,0,0);
+
+		}
+		function drawHut() {
+			var context= document.getElementById("myCanvas");
+			var ctx= context.getContext("2d");
+			ctx.fillStyle = "white";
+			ctx.fillRect(0,0,540,360);
+
+			var img=document.getElementById("imgTwo");
+    		ctx.drawImage(img,0,0);
+
+		}
+		function drawAisle() {
+			var context= document.getElementById("myCanvas");
+			var ctx= context.getContext("2d");
+			ctx.fillStyle = "white";
+			ctx.fillRect(0,0,540,360);
+
+			var img=document.getElementById("imgThree");
+    		ctx.drawImage(img,0,0);
+
+		}
+		function drawStone() {
+			var context= document.getElementById("myCanvas");
+			var ctx= context.getContext("2d");
+			ctx.fillStyle = "white";
+			ctx.fillRect(0,0,540,360);
+
+			var img=document.getElementById("imgFour");
+    		ctx.drawImage(img,0,0);
+
+		}
+		function drawOpen() {
+			var context= document.getElementById("myCanvas");
+			var ctx= context.getContext("2d");
+			ctx.fillStyle = "white";
+			ctx.fillRect(0,0,540,360);
+
+			var img=document.getElementById("imgFive");
+    		ctx.drawImage(img,0,0);
+
+		}
+		function drawMam() {
+			var context= document.getElementById("myCanvas");
+			var ctx= context.getContext("2d");
+			ctx.fillStyle = "white";
+			ctx.fillRect(0,0,540,360);
+
+			var img=document.getElementById("imgSix");
+    		ctx.drawImage(img,0,0);
+
+		}
+		function drawBeach() {
+			var context= document.getElementById("myCanvas");
+			var ctx= context.getContext("2d");
+			ctx.fillStyle = "white";
+			ctx.fillRect(0,0,540,360);
+			
+   			var img=document.getElementById("imgSeven");
+    		ctx.drawImage(img,0,0);
+		}
+		function drawCape() {
+			var context= document.getElementById("myCanvas");
+			var ctx= context.getContext("2d");
+			ctx.fillStyle = "white";
+			ctx.fillRect(0,0,540,360);
+
+			var img=document.getElementById("imgEight");
+    		ctx.drawImage(img,0,0);
+		}
+		function drawCake() {
+			document.getElementById("imgTen").style.display = "inline-block";
+		}
+		function drawFood() {
+			document.getElementById("imgNine").style.display = "inline-block";
+		}
+		function drawParty() {
+			document.getElementById("imgPart").style.display = "inline-block";
+		}
+		function drawTwo() {
+			document.getElementById("imgEleven").style.display = "inline-block";
+		}
+		function drawSome() {
+			document.getElementById("imgTwelve").style.display = "inline-block";
+		}
+		function drawLot() {
+			document.getElementById("imgThirteen").style.display = "inline-block";
+			document.getElementById("imgThirteen").style.display = "inline-block";
+		}
+		function needUs() {
+			document.getElementById("imgUs").style.display = "inline-block";
+		}
+		function jumpPage() {
+			location.href = "abs.html"
+		}
+		
+		
+
+		
+	//	$(document).ready(function(){
+    //		$('input[type="radio"]').click(function(){
+    //    		if($(this).attr("value")=="countC"){
+    //        		$(".box").not(".counC").hide();
+    //        		$(".counC").show();
+    //    		}
+    //    		if($(this).attr("value")=="woodH"){
+    //    		    $(".box").not(".hutW").hide();
+    //        		$(".hutW").show();
+    //    		}
+    //   			if($(this).attr("value")=="CapeC"){
+    //        		$(".box").not(".capC").hide();
+    //        		$(".capC").show();
+    //    		}
+    //		});
+	//	});
+	</script>
+	<!-- <p style="font-family: 'Niconne', cursive;"> Will You? </p>  				Fonts On this Page
+		<p style="font-family: 'Permanent Marker', cursive;">Will You? </p>
+		<p style="font-family: 'Courgette', cursive;">Will You? </p>
+		<p style="font-family: 'Bilbo Swash Caps', cursive;">Will You? </p>
+
+		http://images.freeimages.com/images/thumbs/841/birds-against-sunset-1348658.jpg
+	-->
+	</body>
+</html>

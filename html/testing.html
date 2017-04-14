@@ -1,0 +1,21 @@
+<html> 
+	<body>
+	<img src="pattern.png" id="pic">
+		
+	<canvas id="canvasThree" width="800" height="400" style="border:1px solid #000000;">
+	</canvas> 
+	 
+	<script> 
+
+				// CANVAS BOX THREE
+		var three = document.getElementById("canvasThree");
+		var threeCtx = three.getContext("2d");
+		var img=document.getElementById("pic");
+		var pat = threeCtx.createPattern(img,"repeat");
+		threeCtx.rect(0,0,800,400);
+		threeCtx.fillStyle=pat;
+		ctx.fill(); 
+
+	</script>
+	</body>
+</html>

@@ -1,0 +1,87 @@
+// Circle on a Canvas
+
+	var x = document.getElementById("canvasThree");
+	var xtx = x.getContext("2d");
+	xtx.beginPath();
+	.arc(180,175,40,0,2,Math.PI);
+	xtx.stroke();
+
+// Old snake code, idk what it is or des
+<html>
+<title>Snake? Maybe?</title>
+<style>
+	canvas {
+		background-color: #3E3E3E;
+		border: 1px solid black;
+		
+	}
+	
+</style>
+<body>
+    	<canvas id="canvasOne" width="800px" height="500px"> </canvas>
+  
+    <script>
+    var canvas= document.getElementById("canvasOne");
+    var ctx= canvas.getContext("2d");
+    var food, score, balls, dir;
+
+    function.init(){
+    	dir="right";
+    	score=0;
+    	balls=[	
+    		{x:40 , y:40},
+    		{x:60 , y:40},
+    		{x:80 , y:40},
+
+    	]
+    }
+    
+    function.
+
+    </script>
+
+</body>
+</html>
+
+// CSS left and right columns 
+
+.left {
+    font-family: Verdana;
+    border-radius: 2px;
+    border: 2px dashed black;
+    width: 240px;
+    height: 200px;
+    background-color: silver;
+    float: left;
+    margin-top: 45px;
+    }
+
+.right {
+    font-family:Verdana;
+    border-radius: 2px;
+    border: 2px dashed black;
+    width: 240px;
+    height: 200px;
+    background-color: silver;
+    float: right;
+    margin-top: 45px;
+    }
+
+// Draw Image
+
+           var three = document.getElementById("canvasThree");
+       var threeCtx = three.getContext("2d");
+       var img=document.getElementById("pic");
+       var pat = threeCtx.createPattern(img,"repeat");
+       threeCtx.rect(0,0,800,400);
+       threeCtx.drawImage(img, 10, 10);
+
+// repeat pattern
+    // Canvas Box Something****
+    //var three = document.getElementById("canvas****");
+    //var threeCtx = three.getContext("2d");
+    //var img=document.getElementById("pic");
+    //var pat = ctx.createpattern(img,"repeat");
+    //threeCtx.rect(0,0,800,400);
+    //threeCtx.fillStyle=pat;
+    //ctx.fill(); 
