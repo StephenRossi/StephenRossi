@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="https://img.clipartfest.com/20d3d9c2b95276fbae7a8f7f5e9bd1fb_12-transparent-heart-clip-art-transparent-heart-outline-clipart_1150-1100.png">
+  <link href="https://fonts.googleapis.com/css?family=Arvo|Bahiana|Indie+Flower|Lobster|Yanone+Kaffeesatz|Pacifico" rel="stylesheet">
+  <meta http-equiv="Content-Type" content="text/html;">
+  <meta http-equiv="Content-Language" content="en-us">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <title>Abby Valentinesday</title>
+</head>
+
+
+                          <!-- Site created by Stephen "DuckZ" Rossi, contact me at stephenrossi99@gmail.com  -->
+
+
+
+<style type="text/css">
+  body,html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .textOne {
+    font-family: 'Lobster', cursive;
+    position: absolute;
+    height: 4em;
+    width: 8em;
+    font-size: 4em;
+    z-index: 5;
+    margin: -5em 55%;
+    animation: beatText 1.3s infinite ease-in-out;
+  }
+  .textOneShadow {
+  	font-family: 'Lobster', cursive;
+    position: absolute;
+    height: 4em;
+    width: 8em;
+    font-size: 4em;
+    z-index: 4;
+    margin: -4.95em 54.9%;
+    animation: beatText 1.3s infinite ease-in-out;
+    color: grey;
+  }
+  .parallaxImageTwo{
+    background-image: url("Abs39.jpg");
+  }
+  .parallaxImageOne{
+    background-image: url("Abs26.jpg");
+  }
+  .parallaxImageThree {
+  	background-image: url("pic3.png")
+  }
+  .parallaxImageFour {
+  	background-image: url("ringTwo.jpg");
+  }
+  .parallaxImageFive {
+  	background-image: url("ring1.png");
+  }
+  .parallaxImageSix {
+  	background-image: url("Abby1.jpg");
+  }
+  .parallaxImageSeven {
+  	background-image: url("talented.png");
+  }
+  .parallaxImageEight {
+  	background-image: url("funny.jpg");
+  }
+  .parallaxImageNine {
+  	background-image: url("Abby3.jpg");
+  }
+  .parallaxImageTen {
+  	background-image: url("adorable.jpg");
+  }
+  .parallaxImageOther {
+  	background-image: url("beautiful.png");
+  }
+  .parallaxImageEleven {
+  	background-image: url("smart.png");
+  }
+  .parallaxImageTwelve{
+  	background-image: url("loveme.png");
+  }
+  .parallaxImageThirteen{
+  	background-image: url("perfect.png");
+  }
+  .parallaxImageFourteen{
+  	background-image: url("perfectTwo.png");
+  }
+  .parallaxImageOne, .parallaxImageTwo, .parallaxImageThree, .parallaxImageFour, .parallaxImageFive, .parallaxImageSix, .parallaxImageSeven, .parallaxImageEight, .parallaxImageNine, .parallaxImageTen, .parallaxImageEleven, .parallaxImageTwelve, .parallaxImageThirteen, .parallaxImageFourteen, .parallaxImageOther {
+  	height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .divider {
+  	width: 100%;
+  	position: relative;
+  	height: 1.5em;
+  	background-color: #232323;
+  	color: white;
+  	font-size: 4em;
+  	font-family: 'Bahiana', cursive;
+  	text-align: center;
+  	padding-top: .4em;
+  }
+  .divider span {
+  	margin-top: 2em;
+  }
+  .filter {
+  	background-color: red;
+  	opacity: .3;
+  	height:100%;
+  	z-index: 3;
+ 	width: 100%;
+ 	position: absolute;
+ }
+  .heart { 
+    width: 20em;
+    height: 20em;
+    position: absolute;
+    overflow: hidden;
+    margin: 6em 29%;
+}
+.heart span {
+    display: block;
+    position: absolute;
+    width: 10em;
+    height: 16em;
+    background-color: #c50011;
+ border-top-left-radius: 10em;
+  border-top-right-radius: 10em;
+   border-radius-topleft: 10em;
+   border-radius-topright: 10em;
+    border-top-left-radius: 10em;
+    border-top-right-radius: 10em;
+  animation-duration: 1.3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.heart span.left {
+  transform:rotate(-45deg);
+  transform:rotate(-45deg);
+  transform:rotate(-45deg);
+  left: 2.85em;
+  bottom: 2.2em;
+  border-bottom-right-radius: 10em;
+  border-bottom-left-radius: 0;
+  border-radius-topleft: 10em;
+  border-radius-bottomleft: 0;
+    border-bottom-right-radius: 10em;
+    border-bottom-left-radius: 0;
+  animation-name: shadows-side;
+}
+.heart span.right {
+   transform:rotate(45deg);
+   transform:rotate(45deg);
+   transform:rotate(45deg);
+   border-bottom-right-radius: 0;
+   border-bottom-left-radius: 10em;
+   border-radius-bottomright: 0;
+   border-radius-bottomleft: 10em;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 10em;
+    left: 7.1em;
+    bottom: 2.2em;
+   animation-name: shadows;
+}
+.heart {
+  animation-name: beat;
+  animation-duration: 1.3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  color:red;
+}
+ #colophon {
+  color:#e1e1e1;
+  position:absolute;
+  bottom:5%;
+  right: 0;
+}
+#colophon a{
+  text-decoration: none;
+  color: inherit;
+}
+@keyframes shadows {
+ 0% {
+    box-shadow: .4875em .1875em .1875em rgba(90, 90, 90, .5);
+      }
+ 90% {
+    box-shadow: .875em .3875em .4875em rgba(90, 90, 90, .35);
+    }
+ 100% {
+    box-shadow: .4875em .1875em .1875em rgba(90, 90, 90, .5);
+ }
+}
+@keyframes shadows-side {
+ 0% {
+    box-shadow: -.4875em .1875em .1875em rgba(90, 90, 90, .5);
+}
+ 90% {
+    box-shadow: -.0875em .3875em .4875em rgba(90, 90, 90, .35);
+ }
+ 100% {
+    box-shadow: -.4875em .1875em .1875em rgba(90, 90, 90, .5);
+ }
+}
+@keyframes beat {
+ 0% {
+   transform:scale(.9);
+}
+25% {
+  transform:scale(1.1);
+}
+ 50% {
+  transform: scale(.9);
+ }
+ 75% {
+  transform: scale(1.3);
+ }
+ 100% {
+  transform: scale(.9);
+ }
+}
+@keyframes beatText {
+ 0% {
+   transform:scale(.98);
+}
+25% {
+  transform:scale(1.02);
+}
+ 50% {
+  transform: scale(.98);
+ }
+ 75% {
+  transform: scale(1.06);
+ }
+ 100% {
+  transform: scale(.98);
+ }
+}
+.letterBox {
+	height: 90%;
+	width: 80%;
+	background-color: rgba(80,80,80, .5);
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	position: absolute;
+	margin-left: 10%;
+	border-radius:20%;
+	margin-top: -48%;
+}
+#letterText{
+	color: white;
+	font-family: 'Arvo', serif;
+	padding: 1em 10%;
+	font-size: 1.4em;
+
+}
+.button {
+  		border: 0;
+  		margin-left:65%;
+  		margin-top: -3.5em;
+  		background: #d10000;
+  		border-radius: .5em;
+  		box-shadow: 0 .7EM 0 #8c0202;
+  		color: black;
+  		cursor: pointer;
+  		font: inherit;
+  		outline: 0;
+  		padding: 12px 20px;
+  		transition: all .1s linear;
+  		height: 4em;
+  		width: 12em;
+  		font-family: 'Pacifico', cursive;
+	}
+	.button:active {
+	 	box-shadow: 0 .5em 0 #8c0202;
+    	transform: translateY(3px);
+	}
+	.textstuff {
+		font-size: 2em;
+		margin-top: 0em;
+	}
+</style>
+<body>
+<div class="heart">
+      <span class="left"></span><br>
+    <span class="right"></span>
+</div>
+<div class="filter"> </div>
+<div class="parallaxImageOne"> </div>
+<div class="textOne"><span style="margin-left: -.5em"> You keep </span><br> My Heart beating... </div>
+<div class="textOneShadow"><span style="margin-left: -.5em"> You keep </span><br> My Heart beating... </div>
+<div class="divider"><span> - My dear Fiancé: - </span></div>
+<div class="parallaxImageTwo"> </div>
+<div class="divider"> From the beggining, our first date, I knew you were the one,  </div>
+<div class="parallaxImageThree"> </div>
+<div class="divider"><span> And every day since then, you have reassured that for me... </span></div>
+<div class="parallaxImageFour"> </div>
+<div class="divider"><span> I decided early I wanted you forever, so I gave you a ring... </span></div>
+<div class="parallaxImageFive"> </div>
+<div class="divider"><span> You said Yes! </span></div>
+<div class="parallaxImageSix"> </div>
+<div class="divider" style="height: 3em;"><span> Its been 3 months since then, and I am still falling in love with you more and more every day... </span></div>
+<div class="parallaxImageSeven"> </div>
+<div class="divider"><span> You are talented... </span></div>
+<div class="parallaxImageEight"> </div>
+<div class="divider"><span> You are funny... </span></div>
+<div class="parallaxImageNine"> </div>
+<div class="divider"><span> You are silly... </span></div>
+<div class="parallaxImageTen"> </div>
+<div class="divider"><span> You are adorable... </span></div>
+<div class="parallaxImageOther"> </div>
+<div class="divider"><span> You are beautiful... </span></div>
+<div class="parallaxImageEleven"> </div>
+<div class="divider"><span> You are smart... </span></div>
+<div class="parallaxImageTwelve"> </div>
+<div class="divider"><span> And most important, you love me just as much as I love you! </span></div>
+<div class="parallaxImageThirteen"> </div>
+<div class="divider"><span> You are just perfect in every possible way. </span></div>
+<div class="parallaxImageFourteen"> </div>
+<div class="letterBox"> 
+	<p id="letterText"> I dont really know what to say anymore, we have already written these letters to each other so many times now. Each time I read what you write me I fall in love you all over again. They make me so happy and I hope what I am doing makes you just as happy. We have been together for almost 7 months and that is insane to me, thats a long ass time and I never throught I would get someone to love me the way you do. And I am so glad I did and you found me again, you helped me find the love of my life, you helped me find you. As of today, february 14th, there is less than a month left till I see you again and I cant wait. I wasnt joking about not letting go of you. I am picking you up, carrying you to the car, carrying you to the couch, and cuddle with you all night long. You are mine and I am yours forever. Forever and Always. I love you so much baby.<br><br> Click the button below to see something cool :) </p>
+	<div class="button" onclick="switchIt()"><p class="textstuff"> To My Love: </p> </div>
+</div>
+
+</body>
+<script type="text/javascript">
+  function switchIt() {
+  	
+  	location.href="table.html"
+  }
+</script>
+</html>

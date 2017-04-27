@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="http://pittcsc.org/html-css-jquery-workshop/final/assets/profile.png">
+	<link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa:700|Bungee|Calligraffitti|Pacifico|Orbitron|Russo+One|Roboto+Slab" rel="stylesheet">
+	<meta http-equiv="Content-Type" content="text/html;">
+	<meta http-equiv="Content-Language" content="en-us">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<title>Stephen Rossi</title>
+</head>
+
+
+													<!-- Site created by Stephen "DuckZ" Rossi, contact me at stephenrossi99@gmail.com  -->
+
+
+
+<style type="text/css">
+	html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+	html { 
+	  background-color: #B0A990;
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	}
+	body {
+		padding: 0px;
+		margin: 0px;
+	}
+	.headP{
+		background-color: #191923;
+		height:2em;
+		width: 100%;
+		float: top;
+		border-bottom: .001px solid #23282d;
+		opacity: 1;
+		z-index: 1002;
+		position: fixed;
+	}
+	.headP p{	
+		margin-top: .4em;
+		float: left;
+		margin-left: 15%;
+		font-family: 'Russo One';
+		font-size: 16px;
+		z-index: 1002;
+		text-underline-position: all;
+		text-decoration: 	;
+		color: white;
+	}
+	.headP p2 {
+		margin-top: .6em;
+		float: right;
+		margin-right: 15%;
+		font-family: 'Russo One';
+		font-size: 14px;
+		color: black;
+		z-index: 1002;
+		text-underline-position: all;
+		text-decoration: ;
+		color: white;
+	}
+	.headT {
+		height: 8em;
+		float: top;
+		position: absolute;
+		width: 100%;
+		background-color: #2d2823;
+	}
+	.headT p {
+		margin-top: 1.6em;
+		float: left;
+		margin-left: 23%;
+		font-family: 'Roboto Slab';
+		font-size: 36px;
+		color:  #8c8c8c;
+		z-index: 1002;
+		text-decoration: bold ;
+		text-shadow: -.5px .5px #d9d9d9;
+	}
+	.headT img {
+		height: 5em;
+		margin-top: 2em;
+		margin-left: 15%;
+		position: absolute;
+	}
+	.dropMenu {
+		background-color:#ededed;
+		height: 18em;
+		width:12em;
+		margin-top: 13em;
+		position: absolute;
+		margin-left: 15%;
+		color: #333333;
+		font-family: "Bungee";
+		border: 1px solid #8c8c8c;
+	}
+	#dropHome {
+		height: 3em;
+		width: 12em;
+		background-color: #af0707;
+		text-decoration: underline;
+		color: white;
+	}
+	#dropHome p {
+		padding: 0px;
+		margin: 0px;
+		color: white;
+		padding-left: 1em;
+		padding-top: .2em ;
+	}
+	#dropProjects {
+		height: 3em;
+		width: 12em;
+		border-bottom: 1px solid #d1d1d1;
+	}
+	#dropProjects p {
+		padding: 0px;
+		margin: 0px;
+		padding-left: 1em;
+		padding-top: .2em ;
+	}
+	#dropManagement {
+		height: 3em;
+		width: 12em;
+		border-bottom: 1px solid #d1d1d1;
+	}
+	#dropManagement p {
+		padding: 0px;
+		margin: 0px;
+		padding-left: 1em;
+		padding-top: .2em ;
+	}
+	#dropEmployment {
+		height: 3em;
+		width: 12em;
+		border-bottom: 1px solid #d1d1d1;
+	}
+	#dropEmployment p {
+		padding: 0px;
+		margin: 0px;
+		padding-left: 1em;
+		padding-top: .2em ;
+	}
+	#dropContactUs {
+		height: 3em;
+		width: 12em;
+		border-bottom: 1px solid #d1d1d1;
+	}
+	#dropContactUs p {
+		padding: 0px;
+		margin: 0px;
+		padding-left: 1em;
+		padding-top: .2em ;
+	}
+	#dropNews {
+		height: 3em;
+		width: 12em;
+	}
+	#dropNews p {
+		padding: 0px;
+		margin: 0px;
+		padding-left: 1em;
+		padding-top: .2em ;
+	}
+	#dropNews:hover, #dropContactUs:hover, #dropEmployment:hover, #dropManagement:hover, #dropProjects:hover {
+		background-color: #d9d9d9;
+		text-decoration: underline;
+		color: #0d0d0d;
+		cursor: pointer;
+	}
+	.dropHome:hover{
+		background-color: #840101;
+
+	}
+	.infoBox {
+		float: right;
+		margin-right: 15%;
+		width: 50%;
+		height: 50em;
+		background-color: #ededed;
+		position: relative;
+		margin-top: 13em;
+		border: 2px solid #d1cc8a;
+		border-radius: 5px;
+		margin-bottom: 6em;
+	}
+	.footer {
+		background-color: #191923;
+		height:1em;
+		width: 100%;
+		bottom: 0;
+		border-top: .001px solid #585863;
+		opacity: 1;
+		z-index: 1002;
+		position: fixed;
+	}
+	/*.copyright {
+		margin-top: 0em;
+		float: left;
+		margin-left: 15%;
+		font-size: 12px;
+		color: white;
+		z-index: 1002;
+		text-decoration: ;
+		position: absolute;
+    	font-family: Arial,
+         "Helvetica Neue",
+         Helvetica,
+         sans-serif;
+	} */
+	#time {
+		margin-top: 0em;
+		float: right;
+		margin-right: 15%;
+		font-family: 'Russo One';
+		font-size: 12px;
+		color: black;
+		z-index: 1002;
+		text-underline-position: all;
+		text-decoration: ;
+		color: white;
+
+	}
+}
+</style>
+<body >
+	<div class="headP">
+		<p>
+			Rossi Co. > <u> Home </u>
+		</p>
+		<p2>
+			185 Dean Street | Norwood, MA 02062
+		</p2>
+	</div>
+	<div class="headT">
+		<img src="http://www.pngall.com/wp-content/uploads/2016/03/Bricks-PNG-3.png">
+		<p>
+			Stephen K. Rossi
+		</p>
+		<p id="masonry">
+
+		</p>
+	</div>
+	<div class="dropMenu">
+		<div id="dropHome" onclick="dropHome()"> <p> Home </p> </div>
+		<div id="dropProjects" onclick="dropProjects()"> <p> Past Projects </p> </div>
+		<div id="dropManagement" onclick="dropManagement()"> <p>  Management </p> </div>
+		<div id="dropEmployment" onclick="dropEmployment()"> <p>  Employment </p>  </div>
+		<div id="dropContactUs" onclick="dropContactUs()"> <p>  Contact Us </p> </div>
+		<div id="dropNews" onclick="dropNews()"> <p>  news </p>  </div>
+	</div>
+	<div class="infoBox"> 
+		<img  style="border-radius: 5px; width: 95%; margin-top: .6em;
+		margin-left: 2.5%" src="nameheader.jpg"> 
+		<button id="button"> Hey </button>
+		<button id="button2"> There </button>
+		<p>
+
+		</p>
+	</div>
+	<div class="footer">
+
+	</div>
+	<script type="text/javascript">
+		
+	</script>
+</html>

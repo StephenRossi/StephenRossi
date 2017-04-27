@@ -1,21 +1,33 @@
-<html> 
-	<body>
-	<img src="pattern.png" id="pic">
-		
-	<canvas id="canvasThree" width="800" height="400" style="border:1px solid #000000;">
-	</canvas> 
-	 
-	<script> 
+<!DOCTYPE html>
 
-				// CANVAS BOX THREE
-		var three = document.getElementById("canvasThree");
-		var threeCtx = three.getContext("2d");
-		var img=document.getElementById("pic");
-		var pat = threeCtx.createPattern(img,"repeat");
-		threeCtx.rect(0,0,800,400);
-		threeCtx.fillStyle=pat;
-		ctx.fill(); 
+<html>
+   <head>
+      <title>change picture</title>
+      <script type = "text/javascript">
+          function displayNextImage() {
+              x = (x === images.length - 1) ? 0 : x + 1;
+              document.getElementById("img").src = images[x];
+          }
 
-	</script>
-	</body>
+          function displayPreviousImage() {
+              x = (x <= 0) ? images.length - 1 : x - 1;
+              document.getElementById("img").src = images[x];
+          }
+
+          function startTimer() {
+              setInterval(displayNextImage, 3000);
+          }
+
+          var images = [], x = -1;
+          images[0] = "falconOpen.png";
+          images[1] = "falconClose.png";
+          images[2] = "falconOpen.png";
+      </script>
+   </head>
+
+   <body onload = "startTimer()">
+       <img id="img" src="falconClose.png"/>
+       <button type="button" onclick="displayPreviousImage()">Previous</button>
+       <button type="button" onclick="displayNextImage()">Next</button>
+   </body>
 </html>

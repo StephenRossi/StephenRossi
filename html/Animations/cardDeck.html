@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Card Deck</title>
+</head>
+<style type="text/css">
+
+	.flip-container {
+		cursor: pointer;
+ 		height: 10em;
+		width: 7.5em;
+		margin: 5em auto;
+ 		perspective: 600;
+ 		position: relative;
+ 		color: orange;
+ 		text-align: center;
+ 		line-height: 10em;
+	}
+	.flip {
+		height: 10em;
+    	position: absolute;
+    	transform-style: preserve-3d;
+  		transition: all .5s ease-in-out;
+  		perspective: 20em;
+  		width: 100%;
+  		background-color: none;
+  		border-radius: .5em;
+	}
+	.flip:hover{ 
+ 		transform: scale(1.1);
+	}
+	.flip:active {
+		animation-delay: .4s;
+ 		transform: rotateY(180deg);
+ 	}
+	.flip .side1 {
+  		backface-visibility: hidden;
+  		border-radius: .5em;
+  		height: 10em;
+  		position: absolute;
+  		overflow: hidden;
+  		width: 100%;
+  		border-radius: .5em;
+	}
+	.flip img {
+		width: 100%;
+		height: 10em;
+		border-radius: .5em;
+
+	}
+	.flip .back1 {
+  		color: orange;
+  		line-height: 10em;
+  		text-align: center;
+  		transform: rotateY(180deg);
+  		border-radius: .5em;
+	}
+	.card-container {
+ 		cursor: pointer;
+ 		height: 10em;
+		width: 7.5em;
+		margin-left: 12em;
+		margin-top: 2em;
+ 		perspective: 600;
+ 		position: relative;
+ 		color: orange;
+ 		text-align: center;
+ 		line-height: 8em;
+	}
+	.card {
+		height: 100%;
+    	position: absolute;
+    	transform-style: preserve-3d;
+  		transition: all 1s ease-in-out;
+  		width: 100%;
+  		background-color: black;
+  		border-radius: .5em;
+	}
+	.card:hover {
+ 		transform: rotateY(180deg);
+	}
+	.card .face1 {
+  		backface-visibility: hidden;
+  		border-radius: .5em;
+  		height: 100%;
+  		position: absolute;
+  		overflow: hidden;
+  		width: 100%;
+	}
+	.face1 img {
+		width: 100%;
+		height: 100%;
+	}
+	.card .face2 {
+  		color: orange;
+  		line-height: 8em;
+  		text-align: center;
+  		transform: rotateY(180deg);
+	}
+</style>
+<body background="background.jpg" style="margin: 0em; padding: 0em;">
+
+	<div class="flip-container">
+  		<div class="flip">
+   			 <div class="side1"><img src="face.jpg"> </div>
+   			<div class="side1 back1"><img src="jack.png"></div>
+  		</div>
+	</div>
+	<div class="card-container">
+  		<div class="card">
+   			 <div class="face1"><img src="face.jpg"> </div>
+   			<div class="face1 face2"><img src="jack.png"></div>
+  		</div>
+	</div>
+</body>
+</html>

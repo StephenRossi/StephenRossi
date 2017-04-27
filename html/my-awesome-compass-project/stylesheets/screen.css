@@ -1,0 +1,242 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 19, ../sass/screen.scss */
+body {
+  background: #009688;
+  color: grey;
+  text-align: center;
+}
+
+/* line 24, ../sass/screen.scss */
+a {
+  color: inherit;
+}
+
+/* line 27, ../sass/screen.scss */
+h1, h2, h3, h4 {
+  margin: 0;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* line 32, ../sass/screen.scss */
+h1 {
+  font-size: 3em;
+}
+
+/* line 35, ../sass/screen.scss */
+.menu {
+  filter: url("#shadowed-goo");
+}
+
+/* line 40, ../sass/screen.scss */
+.menu-item, .menu-open-button {
+  background: #ffc107;
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+  margin-left: -40px;
+  position: absolute;
+  top: 20px;
+  color: white;
+  text-align: center;
+  line-height: 80px;
+  transform: translate3d(0, 0, 0);
+  transition: transform ease-out 200ms;
+}
+
+/* line 54, ../sass/screen.scss */
+.menu-open {
+  display: none;
+}
+
+/* line 60, ../sass/screen.scss */
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background: white;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -12.5px;
+  margin-top: -1.5px;
+  transition: transform 200ms;
+}
+
+/* line 75, ../sass/screen.scss */
+.hamburger-1 {
+  transform: translate3d(0, -8px, 0);
+}
+
+/* line 78, ../sass/screen.scss */
+.hamburger-2 {
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 81, ../sass/screen.scss */
+.hamburger-3 {
+  transform: translate3d(0, 8px, 0);
+}
+
+/* line 85, ../sass/screen.scss */
+.menu-open:checked + .menu-open-button .hamburger-1 {
+  transform: translate3d(0, 0, 0) rotate(45deg);
+}
+/* line 88, ../sass/screen.scss */
+.menu-open:checked + .menu-open-button .hamburger-2 {
+  transform: translate3d(0, 0, 0) scale(0.1, 1);
+}
+/* line 91, ../sass/screen.scss */
+.menu-open:checked + .menu-open-button .hamburger-3 {
+  transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+
+/* line 95, ../sass/screen.scss */
+.menu {
+  position: absolute;
+  left: 50%;
+  margin-left: -80px;
+  padding-top: 20px;
+  padding-left: 80px;
+  width: 650px;
+  height: 150px;
+  box-sizing: border-box;
+  font-size: 20px;
+  text-align: left;
+}
+
+/* line 113, ../sass/screen.scss */
+.menu-item:hover {
+  background: white;
+  color: #ffc107;
+}
+/* line 118, ../sass/screen.scss */
+.menu-item:nth-child(3) {
+  transition-duration: 20s;
+}
+/* line 118, ../sass/screen.scss */
+.menu-item:nth-child(4) {
+  transition-duration: 20s;
+}
+/* line 118, ../sass/screen.scss */
+.menu-item:nth-child(5) {
+  transition-duration: 20s;
+}
+/* line 118, ../sass/screen.scss */
+.menu-item:nth-child(6) {
+  transition-duration: 20s;
+}
+
+/* line 124, ../sass/screen.scss */
+.menu-open-button {
+  z-index: 2;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 400ms;
+  transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+  cursor: pointer;
+}
+
+/* line 132, ../sass/screen.scss */
+.menu-open-button:hover {
+  transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+}
+
+/* line 135, ../sass/screen.scss */
+.menu-open:checked + .menu-open-button {
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+}
+
+/* line 141, ../sass/screen.scss */
+.menu-open:checked ~ .menu-item {
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+/* line 145, ../sass/screen.scss */
+.menu-open:checked ~ .menu-item:nth-child(3) {
+  transition-duration: 170ms;
+  transform: translate3d(80px, 0, 0);
+}
+/* line 145, ../sass/screen.scss */
+.menu-open:checked ~ .menu-item:nth-child(4) {
+  transition-duration: 250ms;
+  transform: translate3d(160px, 0, 0);
+}
+/* line 145, ../sass/screen.scss */
+.menu-open:checked ~ .menu-item:nth-child(5) {
+  transition-duration: 330ms;
+  transform: translate3d(240px, 0, 0);
+}
+/* line 145, ../sass/screen.scss */
+.menu-open:checked ~ .menu-item:nth-child(6) {
+  transition-duration: 410ms;
+  transform: translate3d(320px, 0, 0);
+}

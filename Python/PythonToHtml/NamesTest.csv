@@ -1,0 +1,14 @@
+Students,,,,,,,
+First,Last,Age,Grade,Height,Eye Color,Hair Color,
+Stephen,Rossi,16,11,6',Brown,Brown,
+Abby,Burrhus,16,11,"5'3""",Blue,Red,
+,,,,,,,
+Teachers,,,,,,,
+First ,Last,Subject ,Grade,height,Eye Color,Hair Color,VIP
+Joe,Blake,English,10-Sep,"6'3""",Brown,Red,
+Moe,Hake,English,12-Nov,"6'11""",Brown,Brown,Yes
+,,,,,,,
+Classes,,,,,,,
+Department,Class,,Level,Time,Room,Teacher,
+English,Literature,,1,11:50,115,Blake,
+English,Poetry,,4,9:55,411,Hake,

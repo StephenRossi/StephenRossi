@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa:700|Bungee|Calligraffitti|Pacifico|Orbitron|Russo+One|Roboto+Slab" rel="stylesheet">
+  <meta http-equiv="Content-Type" content="text/html;">
+  <meta http-equiv="Content-Language" content="en-us">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <title>Testing</title>
+</head>
+<style type="text/css">
+body {
+  margin: 0em;
+  padding: 0em;
+  background: url('epcot.jpg');
+  background-size: cover;
+}
+.menuIcon1 {
+  width: 5em;
+  height: 3.6em;
+  position: relative;
+  margin: 5em auto;
+  transform: rotate(0deg);
+  transition: 1s ease-in-out;
+  cursor: pointer;
+  background-color: rgba(32, 92, 179, .8);
+  cursor: pointer;
+  border-radius: .5em;
+
+}
+.menuIcon1 .part1, .part2, .part3 {
+    position: absolute;
+    display: block;
+    width: 4em;
+    height: .5em;
+    position: absolute;
+    background: orange;
+    border-radius: .8em;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-out;
+    margin: 10%;
+    cursor: pointer;
+}
+.part2 {
+  top: 1em;
+  transition: .2s ease-in-out
+}
+.part3 {
+  top: 2em;
+}
+.menuIcon1.open .part1 {
+ transform: rotate(45deg);
+ top: 1em;
+ width: 3em;
+ left: .5em;
+}
+.menuIcon1.open .part2 {
+ opacity: 0;
+ margin-right: 200em;
+ width: 0em;
+}
+.menuIcon1.open .part3 {
+ transform: rotate(135deg);
+ top: 1em;
+ width: 3em;
+ left: .5em;
+
+}
+.menuIcon2 {
+  width: 5em;
+  height: 3.6em;
+  position: relative;
+  margin: 5em auto;
+  transform: rotate(0deg);
+  transition: 1s ease-in-out;
+  cursor: pointer;
+  background-color: rgba(32, 92, 179, .8);
+  cursor: pointer;
+  border-radius: .5em;
+
+}
+.menuIcon2 .thing1, .thing2, .thing3 {
+    position: absolute;
+    display: block;
+    width: 4em;
+    height: .5em;
+    position: absolute;
+    background: orange;
+    border-radius: .8em;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-out;
+    margin: 10%;
+    cursor: pointer;
+}
+.thing2 {
+  top: 1em;
+  transition: .2s ease-in-out
+}
+.thing3 {
+  top: 2em;
+}
+.menuIcon2.open .thing1 {
+ transform: rotate(45deg);
+ top: .32em;
+ width: 2em;
+ left: 1.61em;
+}
+.menuIcon2.open .thing2 {
+ transform: rotate(90deg);
+ margin-right: ;
+ width: 3em;
+ margin-left: .97em;
+}
+.menuIcon2.open .thing3 {
+ transform: rotate(135deg);
+ top: .32em;
+ width: 2em;
+ left: .37em;
+}
+
+.menuIcon3{
+  width: 5em;
+  height: 3.6em;
+  position: relative;
+  margin: 5em auto;
+  transform: rotate(0deg);
+  transition: 1s ease-in-out;
+  cursor: pointer;
+  background-color: rgba(32, 92, 179, .8);
+  cursor: pointer;
+  border-radius: .5em;
+
+}
+.menuIcon3 .bap1, .bap2, .bap3 {
+    position: absolute;
+    display: block;
+    width: 4em;
+    height: .5em;
+    position: absolute;
+    background: orange;
+    border-radius: .8em;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-out;
+    margin: 10%;
+    cursor: pointer;
+}
+.bap2 {
+  top: 1em;
+  transition: .2s ease-in-out
+}
+.bap3 {
+  top: 2em;
+}
+.menuIcon3.open .bap1 {
+ transform: rotate(135deg);
+ top: 1.7em;
+ width: 2em;
+ left: 1.61em;
+}
+.menuIcon3.open .bap2 {
+ transform: rotate(90deg);
+ margin-right: ;
+ width: 3em;
+ margin-left: .97em;
+}
+.menuIcon3.open .bap3 {
+ transform: rotate(45deg);
+ top: 1.7em;
+ width: 2em;
+ left: .37em;
+}
+
+</style>
+<body>
+<div class="menuIcon1">
+  <div class="part1"> </div>
+  <div class="part2"> </div>
+  <div Class="part3"> </div>
+</div>
+<div class="menuIcon2">
+  <div class="thing1"> </div>
+  <div class="thing2"> </div>
+  <div class="thing3"> </div>
+</div>
+<div class="menuIcon3"> 
+  <div class="bap1"> </div>
+  <div class="bap2"> </div>
+  <div class="bap3"> </div>
+</div>
+</body>
+  <script type="text/javascript">
+    $(document).ready(function(){
+  $('.menuIcon1, .menuIcon2, .menuIcon3').click(function(){
+    $(this).toggleClass('open');
+  });
+});
+  </script>
+</html>

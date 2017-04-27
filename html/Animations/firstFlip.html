@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cardflip</title>
+</head>
+<style type="text/css">
+	.card-container {
+ 		cursor: pointer;
+ 		height: 10em;
+		width: 6em;
+		margin-left: 12em;
+		margin-top: 2em;
+ 		perspective: 600;
+ 		position: relative;
+ 		color: orange;
+ 		text-align: center;
+ 		line-height: 8em;
+	}
+	.card {
+		height: 100%;
+    	position: absolute;
+    	transform-style: preserve-3d;
+  		transition: all 1s ease-in-out;
+  		width: 100%;
+  		background-color: black;
+  		border-radius: .5em;
+	}
+	.card:hover {
+ 		transform: rotateY(180deg);
+	}
+	.card .face1 {
+  		backface-visibility: hidden;
+  		border-radius: .5em;
+  		height: 100%;
+  		position: absolute;
+  		overflow: hidden;
+  		width: 100%;
+	}
+	.face1 img {
+		width: 100%;
+		height: 100%;
+	}
+	.card .face2 {
+  		color: orange;
+  		line-height: 8em;
+  		text-align: center;
+  		transform: rotateY(180deg);
+	}
+</style>
+<body>
+	<div class="card-container">
+  		<div class="card">
+   			 <div class="face1"><img src="dinonic.jpg"> </div>
+   			<div class="face1 face2">IM A DINO.</div>
+  		</div>
+	</div>
+</body>
+</html>

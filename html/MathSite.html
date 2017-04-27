@@ -1,0 +1,394 @@
+s<html>
+<body onload="clearIt();" style="color: #8d8e3e; background-color:#d4d671">
+<!-- This HTML is sporting 2 tables - both tables are built in the
+     JavaScript.
+
+		 The first table: classes are determined and the table is filled
+		 in according to the classes.
+
+		 The second table: everything is calculated by datapoints, not
+		 by filling in the values for the whole class
+-->
+<style>
+.data {
+	padding: 10px;
+	color: blue;
+}
+.title {
+	padding: 15px;
+	color: black;
+}
+#form {
+	margin-top: 20px;
+	position: absolute;
+	margin-left:30%;
+}
+</style>
+	<center>
+		<h1 style="margin-top: 20px"> Z-Score </h1>
+		<form id="form" oninput="x.value=parseInt(a.value)-parseInt(b.value)/parseInt(c.value)">
+				<input type="box" id="a" placeholder="Value Here">-
+				<input type="box" id="b" placeholder="Mean Here">/
+				<input type="box" id="c" placeholder="Standard Deviation Here">=
+
+				<output type="box" name="x" id="x" for="a b c"></output>
+		</form>
+
+		<h1 style="margin-top: 120px">Frequency Distribution</h1>
+			<input type=text id="getStuff"/>
+				<input type=button value="Add Value" onclick="addValue();">
+				<div id="n" class="data"></div>
+				<div id="mean" class="data"></div>
+				<div id="median" class="data"></div>
+				<div id="mode" class="data"></div>
+				<div id="variance" class="data"></div>
+				<div id="sd" class="data"></div>
+			<table id="classTable" border="1px solid black">
+				<tr><td class="title">Class</td><td class="title">Frequency</td><td class="title">Difference</td><td class="title">Square</td><td class="title">Sq * Freq</td></tr>
+			</table>
+
+<!-- beginning second table -->
+
+			<br><br>
+				<div id="n2" class="data"></div>
+				<div id="mean2" class="data"></div>
+				<div id="variance2" class="data"></div>
+				<div id="sd2" class="data"></div>
+			<table id="classTable2" border="1px solid red">
+				<tr><td class="title">Point</td><td class="title">Difference</td><td class="title">Square</td></tr>
+			</table>
+</center>
+<script>
+// While(user-enters-input){
+// 	add 1 to my counter
+// 	make sure my input is within my “range”… whatever that is
+// 	store the input somewhere
+// 	}
+//
+// Divide my input into classes
+// Display my classes,
+// Display my frequencies,
+// Display my class boundaries,
+// Display my mean,
+// Display my data point – mean,
+// Display my (data point – mean) squared,
+// Display my sum of the (data point – mean) squared,
+// Display my variance, and
+// Display my standard deviation.
+
+//var counter = 20;
+//var collectionArray = [5, 12, 14, 17, 18, 19, 22, 22, 23, 24, 24, 26, 27, 28, 29, 31, 32, 33, 38, 40];
+var counter = 0;
+var collectionArray = [];
+
+var inputValue = document.getElementById("getStuff");
+
+function clearIt(){
+		inputValue.value = "";
+}
+
+//set eventListener
+document.body.addEventListener("keydown", function(e){ if(e.keyCode == 32) addValue();});
+
+/*****************************
+ * untility functions:
+ * Math.round rounds off to the
+ * integer. We need 2 decimal
+ * places...
+ *****************************/
+function roundOff(entry){
+	var hold = entry * 100;
+	var rhold = Math.round(hold);
+	return rhold/100;
+}
+
+/*****************************
+ * validation functions
+ * This can be coded when the
+ * project is defined.
+ *****************************/
+function validationOK(entry){
+		if(entry >= 0 && entry <= 100){
+			return true;
+		}
+		return false;
+}
+
+/*****************************
+ * centerpiece - this function is
+ * kicked off via onclick or the keyboard
+ * event listener
+ *
+ * addValue()
+ * This function drives everything...
+ * @param void
+ * @return void
+ *****************************/
+function addValue(){
+	if(enterInput()){
+		collectionArray.push(Number(inputValue.value));
+		inputValue.value = "";
+		counter++;
+	} else {
+		//cxalculate and display the data
+		doEverythingElse();
+	}
+}
+
+/**********************************************************
+ * doEverythingElse(void)
+ * from function addValue
+ * This function follows the original script from the
+ * pseudocode...
+ **********************************************************/
+function doEverythingElse(){
+	//sort input
+	collectionArray.sort(function(a,b){return a-b;});
+	var range = collectionArray[collectionArray.length - 1] - collectionArray[0];
+
+	var classList = figureClasses(range, counter);
+	calcFrequencies(classList);
+	var mean = calcMean();
+	calcDiff(classList, mean);
+	displayMean(mean);
+	displayMedian(median);
+	displayMode(mode);
+	// listing classes...
+	buildTable(classList);
+	// listing data points - as a comparison
+	buildTable2(mean);
+}
+
+/*****************************************************
+ * enterInput
+ * gets the input value and validates the Number
+ * entered...
+ *****************************************************/
+function enterInput(){
+	var x = document.getElementById("getStuff");
+	if(x.value == ""){
+		return false;
+		}
+	if(validationOK(x.value)){
+		return true;
+	}
+	return false;
+	}
+
+
+/***************************************************
+ * getClass(lo, hi)
+ * @param lo - This is the low class limit
+ * @param hi = This is the high class limit
+ * @return - one classLine (object)
+ * Please note: classLine is used extensively
+ ***************************************************/
+function getClass(lo, hi){
+	var classLine = { "limitLow": "", "limitHi": "", "frequency" : "0", "difference" : "0", "square" : "0"};
+	classLine.limitLow = lo;
+	classLine.limitHi = hi;
+	return classLine;
+}
+
+/**************************************************
+ * calcDiff(classList, mean)
+ * given the classList object and the mean
+ * This function calculates and loads the difference
+ * between the midrange and the mean for each class
+ *
+ * @param classList - ubiquitous
+ * @param mean - calculated in another function
+ * @return void
+ **************************************************/
+function calcDiff(classList, mean){
+	var avg;
+		for(var i=0; i<classList.length; i++){
+			avg = (classList[i].limitHi - classList[i].limitLow)/2;
+			//console.log(avg);
+			classList[i].difference = Number(classList[i].limitLow) + Number(avg) - Number(mean);
+			classList[i].square = classList[i].difference * classList[i].difference;
+		}
+}
+
+/********************************************************************
+ * first - divide the range into classes - class range = 5 or 10
+ * determine the appropriate class size
+ * then push the class lines onto the classList (global)
+ * @param r: data range
+ * @param n: number of data points
+ * @return classList
+ ********************************************************************/
+function figureClasses(r, n){
+	var classList = [];
+	var classSize = 0;
+
+	var numClasses = 7;
+	if(r > 70){
+		numClasses = 10;
+	}
+
+	classSize = Math.ceil(r/numClasses);
+	for(var i=collectionArray[0]; i < (collectionArray[0] + (classSize * numClasses) + 1); i+=(classSize + 1)){
+		classList.push(getClass(i, i+classSize));
+	}
+	return classList;
+}
+
+/**************************************************
+ * calcFrequencies(classList)
+ * given the classList object and the mean
+ * This function calculates and loads the frequencies
+ *
+ * @param classList - ubiquitous
+ * @return void
+ **************************************************/
+function calcFrequencies(classList){
+		for(var i=0; i < classList.length; i++){
+			for(var j=0; j < collectionArray.length; j++){
+				if(collectionArray[j] >= classList[i].limitLow && collectionArray[j] <= classList[i].limitHi){
+					classList[i].frequency++;
+				}
+			}
+		}
+		//console.log(collectionArray);
+		//console.log(classList);
+}
+
+/**************************************************
+ * calcMean()
+ * This function calculates the mean
+ *
+ * @return void
+ **************************************************/
+function calcMean(){
+	var total = 0;
+	for(var j=0; j < collectionArray.length; j++){
+			total += collectionArray[j];
+	}
+	//console.log(total + "/" + counter + "/" + total/counter + "/" + (total/counter * 100));
+	return (Math.round( (total / counter) * 100))/100;
+}
+
+/***********************************************************
+ * buildTable(classList)
+ * This function actually builds the HTML table via the
+ * classList we have built.
+ *
+ * @param classList - must be completely filled in
+ ***********************************************************/
+function buildTable(classList){
+	var classTable = document.getElementById("classTable");
+	var cellList = [];
+	var totalFreq = 0;
+	var totalSquareFreq = 0;
+
+	for(var i=0; i<classList.length; i++){
+		var row = classTable.insertRow(i+1);
+		cellList[0] = row.insertCell(0);
+		cellList[0].innerHTML = classList[i].limitLow + " - " + classList[i].limitHi;
+		cellList[0].className = "data";
+		cellList[1] = row.insertCell(1);
+		cellList[1].innerHTML = classList[i].frequency;
+		cellList[1].className = "data";
+		totalFreq += Number(classList[i].frequency);
+		cellList[2] = row.insertCell(2);
+		cellList[2].innerHTML = roundOff(classList[i].difference);
+		cellList[2].className = "data";
+		cellList[3] = row.insertCell(3);
+		cellList[3].innerHTML = roundOff(classList[i].square);
+		cellList[3].className = "data";
+		cellList[4] = row.insertCell(4);
+		cellList[4].innerHTML = roundOff(classList[i].square * classList[i].frequency);
+		cellList[4].className = "data";
+		totalSquareFreq += roundOff(classList[i].square * classList[i].frequency);
+		//console.log(classList[i]);
+		}
+
+	var n = document.getElementById("n");
+	n.innerHTML = "n = " + counter;
+
+	var variance = document.getElementById("variance");
+	console.log(totalSquareFreq);
+	console.log(totalFreq);
+	variance.innerHTML = "Variance: " + roundOff(totalSquareFreq / totalFreq);
+	var sd = document.getElementById("sd");
+	sd.innerHTML = "Standard Deviation: " + roundOff(Math.sqrt(totalSquareFreq / totalFreq));
+}
+
+/***********************************************************
+ * buildTable2(mean)
+ * This function actually builds the HTML table via the
+ * individual data points and the mean.
+ *
+ * @param mean - as calculated in calcMean
+ ***********************************************************/
+function buildTable2(mean){
+	var classTable = document.getElementById("classTable2");
+	var totalData = 0;
+	var totalDataSq = 0;
+	var cellList = [];
+
+	for(var i=0; i<collectionArray.length; i++){
+		var row = classTable.insertRow(i+1);
+		cellList[0] = row.insertCell(0);
+		cellList[0].innerHTML = collectionArray[i];
+		cellList[0].className = "data";
+		cellList[1] = row.insertCell(1);
+		cellList[1].innerHTML = roundOff(collectionArray[i] - mean);
+		cellList[1].className = "data";
+		hold = collectionArray[i] - mean;
+		cellList[2] = row.insertCell(2);
+		cellList[2].innerHTML = roundOff(hold * hold);
+		cellList[2].className = "data";
+		totalData += hold;
+		totalDataSq += (hold * hold);
+		}
+
+	var n2 = document.getElementById("n2");
+	n2.innerHTML = "n = " + counter;
+	var variance = document.getElementById("variance2");
+	variance.innerHTML = "Variance: " + roundOff(totalDataSq / counter);
+	var sd = document.getElementById("sd2");
+	sd.innerHTML = "Standard Deviation: " + roundOff(Math.sqrt(totalDataSq / counter));
+}
+
+/*******************************************
+ * displayMean
+ * @param mean
+ * This function loads the mean into the
+ * HTML tables
+ *******************************************/
+function displayMean(mean){
+	var meanElt = document.getElementById("mean");
+	meanElt.innerHTML = "Mean: " + mean;
+	var meanElt2 = document.getElementById("mean2");
+	meanElt2.innerHTML = "Mean: " + mean;
+}
+
+/*******************************************
+ * displayMedian
+ * @param median
+ * This function calculates and loads
+ * the median into the HTML tables
+ *******************************************/
+function displayMedian(median){
+	var medianElt = document.getElementById("median");
+	medianElt.innerHTML = "Median: " + median;
+
+}
+
+/*******************************************
+ * displayMode
+ * @param mode
+ * This function calculates and loads
+ * the mode into the HTML tables
+ *******************************************/
+function displayMode(mode){
+	var modeElt = document.getElementById("mode");
+	modeElt.innerHTML = "Mode: " + mode;
+
+}
+
+</script>
+</body>
+</html>

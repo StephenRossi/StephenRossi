@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="SR.png">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Open+Sans+Condensed:300,700" rel="stylesheet">
+ <meta http-equiv="Content-Type" content="text/html;">
+  <meta http-equiv="Content-Language" content="en-us">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <title>
+    Stephen Rossi | About Me
+  </title>
+</head>
+<style type="text/css">
+  html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup,
+ tt, var,
+b, u, i
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  overflow: hidden;
+
+}
+
+    body {
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    background-color: #e5e4bc;
+    background: url('062.jpg');
+    background-size: cover;
+	}
+	#left {
+		float: left;
+		background-color: #4f4c38; 
+		/* background: url('test.jpg'); 
+		 background-size: cover; ) */
+		border-bottom-right-radius: 2vh; 
+		border-top-right-radius: 2vh;
+		box-shadow: 2px .2em 2.5px rgba(44, 44, 44, 1);
+		width: 35vw;
+		height: 100vh;	
+		border-right: 1px solid black;
+		z-index: -3;
+		transition: 1s;
+	}
+
+	#leftTab{
+		height: 10vh;
+		width: 4vh;
+		background-color: black;
+		border-bottom-right-radius: 2vh;
+		border-top-right-radius: 2vh;
+		margin-left: 35vw;
+		margin-top: 8vh;
+		background-color: #232426;
+		box-shadow: 1px .1em 2px rgba(44, 44, 44, 1); 
+		transition: 1s;
+		position: absolute;
+		border-left: 1px solid black;
+	}
+	#leftTab:hover {
+		background-color: #4f4c38;
+		border-left-color: #4f4c38;
+		transition: 1s;
+		box-shadow: 2px .1em 2px rgba(44, 44, 44, 1); 
+		cursor: pointer;
+	}
+	#circle {
+		height: 30vh;
+		width: 30vh;
+		border-radius: 50%;
+		border: .3vh solid #c4c8ce;
+		background: url("m.jpg");
+		background-size: cover;
+		margin-top: 30vh;
+		margin-left: 10vw;
+		z-index:0;
+		opacity: 1;
+		transition: 1s;
+		animation: .8s fadeIn ease-out;
+	}
+	#header {
+		position: absolute;
+		margin-top: 22vh;
+		margin-left: 10.75vw;
+		font: 3vh MonoSpace;
+		color: #c4c8ce;
+	}
+	#lineOne {
+		height: 4vh;
+		width: .1vw;
+		border-radius: 2vh;
+		background-color: #c4c8ce;
+		position: absolute;
+		left: 17.25vw;
+		top: 26vh;
+		animation: 1s growIt2 ease-out;
+	}
+	#lineTwo {
+		height: .1vh;
+		width: 14vw;
+		border-radius: 2vh;
+		background-color: #c4c8ce;
+		position: absolute;
+		left: 10.25vw;
+		top: 26vh;
+		animation: 2s moveLeft ease-out;
+	}
+	#lineThree {
+		height: 20vh;
+		width: .1vw;
+		border-radius: 2vh;
+		background-color: #c4c8ce;
+		position: absolute;
+		left: 17.25vw;
+		top: 60.1vh;
+		animation: 1.7s growIt1 ease-out;
+	}
+	#lineFour {
+		height: .2vh;
+		width: 22vw;
+		border-radius: 2vh;
+		background-color: #c4c8ce;
+		position: absolute;
+		left: 6.25vw;
+		top: 76vh;
+		animation: 2.5s moveLeft ease-out;
+	}
+	#lineOne, #lineTwo, #lineThree, #lineFour {
+		transition: 1s;
+	}
+	#textOne {
+		position: absolute;
+		margin-top: 13vh;
+		margin-left: 10.5vw;
+		font-size: 2vh;
+		font-family: 'Open Sans Condensed', sans-serif;
+		font-weight: bold;
+		color: #c4c8ce;
+		animation: 3s fadeIn ease-out;
+	}
+	#textTwo {
+		position: absolute;
+		margin-top: 13vh;
+		margin-left: 21.25vw;
+		font-size: 2vh;
+		font-weight: bold;
+		font-family: 'Open Sans Condensed', sans-serif;
+		color: #c4c8ce;
+		animation: 3.2s fadeIn ease-out;
+	}
+	#textThree {
+		position: absolute;
+		margin-top: 16vh;
+		margin-left: 6.5vw;
+		font-size: 2vh;
+		font-family: 'Open Sans Condensed', sans-serif;
+		font-weight: bold;
+		color: #c4c8ce;
+		animation: 3.4s fadeIn ease-out;
+	}
+	#textFour {
+		position: absolute;
+		margin-top: 16vh;
+		margin-left: 19.75vw;
+		font-size: 2vh;
+		font-weight: bold;
+		font-family: 'Open Sans Condensed', sans-serif;
+		color: #c4c8ce;
+		animation: 3.6s fadeIn ease-out;
+	}
+	#topLine {
+		background-color: white;
+		width:.7vh;
+		height: 2.2vh;
+		position: absolute;
+		left: .6vw;
+		top: 3.6vh;
+		transform: rotate(40deg); 
+		border-radius: 30em;
+		transition: 2s;
+	}
+	#bottomLine {
+		background-color: white;
+		width:.7vh;
+		height: 2.2vh;
+		position: absolute;
+		left: .6vw;
+		top: 4.85vh;
+		transform: rotate(-40deg); 
+		border-radius: 30em;
+		transition: 1s;
+	}
+	#leftTab:hover #bottomLine, #leftTab:hover #topLine  {
+		background-color: #adadad;
+		transition: 2s;
+	}
+	#left.open {
+		margin-left: -34vw;
+	}
+	#leftTab.open {
+		margin-left: 1vw;
+	}
+	#left.open, #leftTab.open {
+		transition: 2s;
+	}
+	#lineOne.open, #lineTwo.open, #lineThree.open, #lineFour.open {
+		margin-left: -34vw;
+		transition: 2s;
+	}
+	#bottomLine.open, #topLine.open {
+		transition: 2s;
+		left: .8vw;                /* PLZ HELP FIX THIS D'''': */
+	}
+	#topLine.open {
+		transform: rotate(-40deg);
+	}
+	#bottomLine.open {
+		transform: rotate(40deg);
+	}
+
+	@keyframes slideDownBounce {
+		0%{
+			top: -20vh;
+			margin-top: -20vh;
+		}
+		70%{
+			top: 30vh;
+			margin-top:30vh;
+		}
+		80% {
+			top: 33vh;
+			margin-top:33vh;
+		}
+		90% {
+			top: 32vh;
+			margin-top:32vh;
+		}
+		100%{
+			top: 30vh;
+			margin-top:30vh;
+		}
+
+	}
+	@keyframes growIt1 {
+		0% {
+			height: 0vh;
+		}
+		100% {
+			height: 20vh;
+		}
+	}
+	@keyframes growIt2 {
+		0% {
+			height: 0vh;
+		}
+		100% {
+			height: 4vh;
+		}
+	}
+	@keyframes moveLeft {
+		0% {
+			margin-left: -250vw;
+		}
+		40% {
+			margin-left: -100vw;
+		}
+		100% {
+			margin-left: 0;
+		}
+	}
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+		90% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+	#right {
+		position: absolute;
+		left: 40vw;
+		height: 95vh;
+		width: 55vw;
+		top: 2.5vh;
+		border-radius: 5px;
+		background-color: rgba(226, 215, 181,.9);
+		transition: 1s;
+		border: 1px solid #bab194;
+		color: black;
+	}
+	#right.open {
+		left: 22vw;
+		transition: 2s;
+		transition-delay: 1s;
+	}
+	#headerR	 {
+		font: 4vh MonoSpace;
+		margin-left: 23vw;
+		margin-top: 6vh;
+		color: #444033;
+
+	}
+	#headLine {
+		height: .3vh;
+		width: 35vw;
+		margin-left: 10vw;
+		position: absolute;
+		background-color: #bab194;
+		margin-top: 1vh;
+		border: 2vh;
+
+	}
+	#headLine p {
+
+	}
+	#bodyText {
+		width: 45vw;
+		height: 80vh;
+		margin-left: 5vw;
+		margin-top: 4vh;
+	}
+	#bodyText span {
+		color: #032459;
+		text-decoration: underline;
+
+	}
+	#bodyText span:hover {
+		cursor: pointer;
+	}
+	#bodyText p {
+		text-align: center;
+		text-indent: 4vw;
+		font-size: 1.6em;
+		font-family: 'Amatic SC', cursive;
+		font-weight: bold;
+	}
+	.menuIcon2 {
+		cursor: pointer;
+		transition: 2s;
+	}
+	
+	.menuIcon2 #thing1, #thing2 {
+    	position: absolute;
+    	display: block;
+    	background: orange;
+    	border-radius: 2em;
+    	cursor: pointer;
+    	animation: 4s fadeIn ease-out;
+    }
+	#thing1 {
+		transform: rotate(-30deg);
+		top: 92.2vh;
+ 		left: 5vw;
+ 		width: 2vw;
+ 		height: .9vh;
+ 		transition: 2s
+	}
+	#thing2 {
+ 		transform: rotate(30deg);
+ 		top: 94vh;
+ 		width: 2vw;
+ 		height: .9vh;
+ 		left: 5vw;
+ 		transition: 2s
+	}
+	#thing2.open {
+		transition: 2s;
+		left: -25vw;
+	}
+	#thing1.open {
+		left: -25vw;
+		transition: 2s;
+	}
+	#menuText.open {
+		left: -22vw;
+		transition: 2s;
+	}
+	#menuText {
+		position: absolute;
+		animation: 4.2s fadeIn ease-out;
+		transition: 2s;
+		color: orange;
+		left: 8vw;
+		top: 88.2vh;
+		font-size: 8vh;
+		font-family: 'Amatic SC', cursive;
+	}
+</style>
+<body>
+	<div id="left">
+		<div id="header"> Stephen K. Rossi </div>
+		<div id="lineOne"></div>
+		<div id="lineTwo"></div>
+		<div id="circle"></div>
+		<div id="lineThree"></div>
+		<div id="lineFour"></div>
+		<div id="textOne">Email</div>
+		<div id="textTwo">Phone</div>
+		<div id="textThree">SteveR@stephenkrossi.com</div>
+		<div id="textFour">(774)219-1596</div>
+		<div class="menuIcon2" onclick="returnFunction()">
+  			<div id="thing1"> </div>
+  			<div id="thing2"> </div>
+  			<div id="menuText"> Back</div>
+		</div>
+	</div>
+	<div id="leftTab">
+		<div id="topLine"> </div>
+		<div id="bottomLine"> </div>
+	</div>
+	<div id="right">
+		<div id="headerR"> About Me </div>
+		<div id="headLine"> </div>
+		<div id="bodyText">
+			<p> I am currently a student and will be going into my senior year of high school this upcoming september of 2017. This site(stephenkrossi.com) is my personal website meant to display work, assist others, and store my progression of coding. Through the rest of my high school and college education I will continuing to pursue a computer science and programming career along with continuing digital graphics and web design on the side. I am currently taking an AP Computer Science class to help prepare myself for the college level courses and diving deeper into the world of computers and programming. I am the Owner of the <span src="www.DuckZBrand.com">DuckZBrand</span> name and development team, and will be working on building that site and community for the majority of senior year along with providing free help, inexpensive web design services and, cheap tech support. For detailed information on services please visit <span src="DuckZBrand.com">DuckZBrand.com</span>, and to look into projects of mine head over to my <span src="portfolio.html">portfolio!</span> If you have any questions or want to get in direct contact please head to my<span src="contactMe"> contacts </span>page.  </p> </div>
+		<div id="lineRight"> </div>
+
+	</div>
+</body>
+<script>
+	$(document).ready(function(){
+  		$('#leftTab').click(function(){
+    		$(this).toggleClass('open');
+    		$('#left').toggleClass('open');
+    		$('#topLine').toggleClass('open');
+    		$('#bottomLine').toggleClass('open');
+    		$('#lineOne').toggleClass('open');
+    		$('#lineTwo').toggleClass('open');
+    		$('#lineThree').toggleClass('open');
+    		$('#lineFour').toggleClass('open');
+    		$('#right').toggleClass('open');
+    		$('#menuText').toggleClass('open');
+    		$('#thing2').toggleClass('open');
+    		$('#thing1').toggleClass('open');
+    	});
+    });
+
+	function returnFunction() {
+		location.href="index.html"
+	}
+</script>
+</html>

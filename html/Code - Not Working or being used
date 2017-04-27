@@ -67,21 +67,24 @@
     margin-top: 45px;
     }
 
-// Draw Image
+// how to indent or move text over
+	colspan="__"
+	colspan="3"
 
-           var three = document.getElementById("canvasThree");
-       var threeCtx = three.getContext("2d");
-       var img=document.getElementById("pic");
-       var pat = threeCtx.createPattern(img,"repeat");
-       threeCtx.rect(0,0,800,400);
-       threeCtx.drawImage(img, 10, 10);
+// how to insert blank line into html page
+	<p>&nbsp;</p>
+	<p></p>
+// canvas position in java 
+ this.canvas.style = "position: relative; top: 250px; left: 250px; border:1px solid blue"
+ 
+// Example of transparent box 
+div.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.7;
+  }
 
-// repeat pattern
-    // Canvas Box Something****
-    //var three = document.getElementById("canvas****");
-    //var threeCtx = three.getContext("2d");
-    //var img=document.getElementById("pic");
-    //var pat = ctx.createpattern(img,"repeat");
-    //threeCtx.rect(0,0,800,400);
-    //threeCtx.fillStyle=pat;
-    //ctx.fill(); 
+// 
+
+

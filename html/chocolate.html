@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="http://www.justbringthechocolate.com/wp-content/uploads/2012/01/chocolate-candy-transparent-background-0400-10081.gif">	
+	<link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa:700|Indie+Flower|Nova+Script" rel="stylesheet">
+	<title>Chocolate</title>
+</head>
+<style type="text/css">
+	body {
+		background-size:cover;
+		margin: 0px;
+		padding: 0px;
+	}
+		.overlay {
+   		position:fixed;
+    	top:0;
+    	bottom:0;
+    	left:0;
+    	right:0;
+    	background-color: grey;
+    	opacity:0.2;
+    	z-index:-2;
+	}
+	#header {
+		width: 80%;
+		height: 6em;
+		margin: 0px;
+		padding: 0px;
+		background-color: rgba(84, 35, 0, 0.4);
+		margin-top: 1em;
+		border-radius: 18px;
+		margin-left: 10%;
+		text-align: center;
+		z-index: 500
+	}
+	#headerTxt {
+		font-size: 42px;
+		padding-top: .2em;
+		font-family: 'Aref Ruqaa', serif;
+		opacity: .8;
+	}
+	#bodyz {
+		width: 90%;
+		height: 380px;
+		color: black;
+		background-color: rgba(155, 43, 15, .4);
+		margin-left: 5%;
+		border-radius: 10px;
+		text-align: center;
+		position: relative;
+		padding-left: 8px;
+		padding-right: 8px;
+		padding-top: 2px;
+		margin-top: 20px;
+		font-family: 'Indie Flower', cursive;
+		font-size: 24px;
+
+	}
+	#bodyTxt {
+		opacity: .9;
+	}
+	#signature {
+		float: right;
+		margin-right: 120px;
+	}
+	#return {
+		width: 12%;
+		height: 60px;
+		background-color: rgba(119, 49, 0, .8);
+		float: right;
+		margin-right: 8%;
+		margin-top: 30px;
+		border-radius: 4px;
+		text-align: center;
+		padding-top: 5px;
+		font-family: 'Nova Script', cursive;
+	}
+	#return:hover {
+		background-color: rgba(102, 42, 0, 1);
+		color: white;
+	}
+	
+	}
+</style>
+<body background="chocolate.jpg">
+	<cetner>
+		<div class="overlay"> </div>
+		<div id="header">
+			<p id="headerTxt"> 
+				Chocolate...
+			</p>
+		</div>
+
+		<div id="bodyz">
+			<p>
+				Yummy chocolate..... that is all.
+				<p id="signature"> 
+					- Love Stephen
+				</p>
+			</p>
+		</div>
+	</cetner>
+		<div id="return" onclick="back()">
+			<p id="bodyTxt">
+				Return
+			</p>	
+		</div>
+</body>
+	<script type="text/javascript">
+		function back() {
+			location.href="christmasindex.html"
+		}
+	</script>
+</html>
