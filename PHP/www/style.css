@@ -1,0 +1,203 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	text-decoration: none;
+	font-family: "Arial";
+}
+body {
+	background: linear-gradient(to bottom, #aaa 0%, #ddd 20%, #ddd 80%, #aaa 100%) no-repeat fixed center;
+}
+
+header {
+	width: 100%;
+	height: 60px;
+	background-color: #222222; 
+}
+
+nav ul {
+	float: right;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+nav ul li {
+	list-style: none;
+	float: left;
+	margin-right: 20px;
+	margin-top: 3px;
+}
+nav ul li a {
+	color: white;
+	font-family: Arial;
+	font-size: 16px
+}
+nav #headTitle {
+	color: white;
+	font-family: Arial;
+	font-size: 32px;
+	font-weight: bold;
+	position: absolute;
+	left: 40px;
+	top: 12px;
+}
+nav ul form {
+	float: left;
+	margin-right: 20px;
+}
+nav ul form input {
+	float: left;
+	border: none;
+	margin-right: 5px;
+	padding: 2px;
+	border-radius: 1px;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 16px;
+}
+nav ul form button {
+	float: left;
+	border: none;
+	margin-right: 0px;
+	background-color: #fff;
+	color: #222;
+	font-size: 16px;
+	cursor: pointer;
+	padding: 2px;
+	border-radius: 1px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.loggedIn {
+	font-family: Arial;
+	width: 100%;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 40px;
+	font-size: 20px;
+}
+.signUpInput input{
+	margin-top: 15px;
+	width: 30%;
+	margin-left: 35%;
+	border: 1px solid #ddd;
+	text-indent: 8px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font-family: Arial;
+}
+.signUpInput button{
+	margin-top: 10px;
+	width: 30%;
+	margin-left: 35%;
+	font-family: Arial;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 18px;
+	background-color: #ff9000;
+	border: 1px solid #ffad44;
+	border-radius: 2px;
+}
+.welcomeText {
+	text-align: center;
+	width: 100%;
+	font-family: Arial;
+	font-size: 24px;
+	font-weight: bold;
+	cursor: default;
+}
+#welcomeImg {
+	margin-left: 35%;
+}
+#container {
+	width: 85%;
+	margin-left: 7.5%;
+	height: 500px;
+	background-color: #333;
+	border-radius: 5px;
+	margin-top: 40px;
+	border: 1px solid #bbb;
+}
+#container h1 {
+	color: #ddd;
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+	font-weight: bold;
+	text-decoration: underline;
+	font-family: Arial;
+	cursor: default;
+}
+#chatContain {
+	width: 240px;
+	height: 280px;
+	background-color: #999;
+	border-radius: 5px;
+	margin-left: 40px;
+	border: 1px solid #111;
+}
+#chatContain #chatOut {
+	height: 220px;
+	width: 220px;
+	border-radius: 5px;
+	margin-top: 10px;
+	margin-left: 10px;
+	background-color: #444;     
+	color: #ddd; 
+	font-family: "Arial";
+	overflow-y: scroll;
+}
+#chatConainer {
+	margin-top: 6px;
+}
+#chatConainer div {
+	margin-top: 0px;
+	margin-left: 7px;
+	margin-right: 7px;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 5px;
+	font-size: 14px;
+}
+#chatConainer div span {
+	font-size: 10px;
+	padding-left: 10px;
+}
+
+#chatContain form input {
+	float: left;
+	margin-left: 5px;
+	margin-top: 16.4px;
+	font-size: 12px;
+	width: 170px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 4px;
+	border: 1px solid #ddd;
+	border-radius: 1px;
+
+}
+#chatContain form button {
+	float: right;
+	margin-right: 5px;
+	margin-top: 16px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	text-align: center;
+	background-color: #ff9000;
+	border: 1px solid #ffad44;
+	border-radius: 2px;
+	font-family: "Arial";
+	padding-left: 4px;
+	padding-right: 4px;
+	cursor: pointer;
+}
+#profileinfobox {
+	width: 200px;
+	background-color: #ddd;
+	height: 310px;
+	padding-left: 40px;
+	padding-top: 20px;
+	margin-left: 100px;
+	margin-top: 40px;
+	border-radius: 2px solid #ccc;
+	border: 1px solid #555;
+}

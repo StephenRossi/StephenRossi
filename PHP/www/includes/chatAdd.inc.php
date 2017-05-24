@@ -5,7 +5,7 @@ include '../dbh.php';
 date_default_timezone_set("America/New_York");
 
 $chatInp = $_POST["chatInp"];
-$user = $_SESSION['uid'];
+$user = $_SESSION['dispName'];
 $date = date("m/d/y");
 $time = date("h:ia");
 

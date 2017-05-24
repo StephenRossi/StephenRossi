@@ -4,6 +4,7 @@
 <br> <br>
 <br>
 <?php
+	include 'dbh.php';	
 
 	#print_r($_SESSION);
 $sql = "SELECT * FROM chat";
@@ -15,14 +16,14 @@ if (isset($_SESSION['uid'])) {  // if logged in do everything below
 	echo "<div id='container'> <h1>Profile of ".$_SESSION['uid'].":</h1>";
 	echo "<div id='profileContainer'>
 		<div id='profileinfobox'>
-			<form action='includes/saveProf.inc.php' method='POST'>
+			<form action='includes/saveProg.inc.php' method='POST'>
 				<div id='profilePicDisplay'> insert Image here</div>
-				<div class='profTitle'> Display Name: </div><input id='changeDisplayN' value='".$_SESSION['dispName']."'> </input>
+				<div class='profTitle'> Display Name: </div><input id='changeDisplayN' name='changeDisplayN' value='".$_SESSION['dispName']."'> </input>
 				<div id='profUid'>@".$_SESSION['uid']." </div> <br>
-				<div class='profTitle'> First Name: </div><input id='changeFName' value='".$_SESSION['fName']."'> </input> <br>
-				<div class='profTitle'> Last Name: </div><input id='changeLName' value='".$_SESSION['lName']."'> </input> <br>
-				<div class='profTitle'> Email: </div><input id='setEmail' value='".$_SESSION['email']."'> </input> <br>
-				<div class='profTitle'> Description: </div><input id='setEmail' value='".$_SESSION['description']."'> </input> <br>
+				<div class='profTitle'> First Name: </div><input id='changeFName' name='changeFName' value='".$_SESSION['fName']."'> </input> <br>
+				<div class='profTitle'> Last Name: </div><input id='changeLName' name='changeLName' value='".$_SESSION['lName']."'> </input> <br>
+				<div class='profTitle'> Email: </div><input id='setEmail' name='setEmail' value='".$_SESSION['email']."'> </input> <br>
+				<div class='profTitle'> Description: </div><input id='setDesc' name='setDesc' value='".$_SESSION['description']."'> </input> <br>
 				<button> Save </button>
 			</form>
 		</div>
