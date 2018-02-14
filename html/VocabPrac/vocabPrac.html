@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	<link rel="icon" href="https://images-na.ssl-images-amazon.com/images/I/51agIgbhJqL.png" type="image/png" sizes="16x16"> 
+	<title>Vocab Practice</title>
+</head>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background-color: #555;
+		}
+		#card{
+			background-color: #ccc;
+			color: #333;
+			height: 11vw;
+			width: 40vw;
+			margin-left: 29vw;
+			margin-top: 10vw;
+			border-radius: 1.2%;
+			text-align: center;
+			padding-left: 1vw;
+			padding-right: 1vw;
+			font-family: Arial;
+		}
+		#word{
+			position: relative;
+			font-size: 120%;
+			text-decoration: underline;
+			top: 2vw;
+		}
+		#defenition{
+			position: relative;
+			top: 3vw;
+			background-color: #ccc;
+		}
+		#defenition:hover{
+			background-color: #ccc;
+			cursor: pointer;
+		}
+		#header {
+			position: absolute;
+			width: 100%;
+			text-align: center;
+			color: #002868;
+			text-decoration: underline;
+			font-family: Arial;
+			font-size: 230%;
+			margin-top: -7vw;
+		}
+		button{
+			margin-top: 4vw;
+			text-align: center;
+			width: 10vw;
+			margin-left: 45vw;
+		}
+	</style>
+<body>
+	<div id="header"> Vocab Practice</div>
+	<div id="card">
+		<div id="word"> Vocab Word </div>
+		<div id="defenition"> Defenition Here </div>
+	</div>
+	<button onclick=randomWord();> Random Word </button>
+	<button onclick=hideDef();> Hide Defenition </button>
+	<button onclick=showDef();> Show defenition </button>	
+</body>
+	<script type="text/javascript">
+	var vocabList = ["Abjure", "Amorphous", "Animus", "Dichotomy", "Exemplar", "Herculean", "Inchoate", "Individious", "Melange", "Nefarious", "Nihlism", "Ratify", "Subsume", "Variegated", "Vitiate"];
+	var defenitions = ["(v.) To renounce or give up formally.", "(adj.) Without definite shape, boundary, or character.", "(n.) An attitude or spirit within a person that stringly influences him or her. <br><br> (n.) Deep-seated ill will.", "(n.) Division into two distinct parts or groups.", "(n.) An example or model, especially an ideal one. <br><br> (adj.) Exemplary.", "(adj.) Of extraordinary size, power, or difficulty.", "(adj.) Not fully formed or realized.", "(adj.) Likely to cause resentment or animosity.", "(n.) A mixture of materials.", "(adj.) Very wicked.", "(n.) A viewpoint that denies any meaning of value to life. <br><br> (adj.) Nihlistic.", "(v.) To approve, confirm, or verfiy.", "(v.) To encompass in a larger or more comprehensive group; to include.", "(adj.) Varied as to form, type, or color.", "(v.) To impair or weaken."];
+
+	function randomWord(){
+		var rand =  Math.floor(Math.random() * (vocabList.length -1));
+		document.getElementById("word").innerHTML = vocabList[rand];
+		document.getElementById("defenition").innerHTML = defenitions[rand];
+	}
+	</script>
+</html>
